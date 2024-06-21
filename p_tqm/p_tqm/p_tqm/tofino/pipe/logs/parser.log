@@ -1,0 +1,79 @@
+ingress::parse_ethernet is split into 2 states:
+  ingress::parse_ethernet
+  ingress::parse_ethernet.$split_0
+egress::parse_ethernet is split into 2 states:
+  egress::parse_ethernet
+  egress::parse_ethernet.$split_0
+allocated { $half } to {  [ egress::start : inbuf bit[7..15] eg_intr_md.egress_port; ] }
+allocated { $byte1 } to {  [ egress::parse_ethernet.$split_0 : inbuf bit[-24..-17] hdr.ipv4/ipv4.protocol; ] }
+allocated { $half } to {  [ ingress::start : inbuf bit[7..15] ig_intr_md.ingress_port; ] }
+allocated { $byte1 } to {  [ ingress::parse_ethernet.$split_0 : inbuf bit[88..95] hdr.ipv4/ipv4.protocol; ] }
+ComputeLoweredParserIR preorder on Header : header ingress_intrinsic_metadata_t @__intrinsic_metadata {
+  @__intrinsic_metadata bit<1> resubmit_flag;
+  @padding @__intrinsic_metadata bit<1> _pad1;
+  @__intrinsic_metadata bit<2> packet_version;
+  @padding @__intrinsic_metadata bit<3> _pad2;
+  @__intrinsic_metadata bit<9> ingress_port;
+  @__intrinsic_metadata bit<48> ingress_mac_tstamp; }
+ComputeLoweredParserIR preorder on Header : header timer_h {
+  bit<2> _pad1;
+  bit<1> again;
+  bit<2> pipe_id;
+  bit<3> app_id;
+  bit<8> _pad2;
+  bit<16> batch_id;
+  bit<16> packet_id; }
+ComputeLoweredParserIR preorder on Header : header p4_header_h {
+  bit<32> delay;
+  bit<32> depth;
+  bit<7> pad2;
+  bit<9> egress_port;
+  bit<16> drop_prob; }
+ComputeLoweredParserIR preorder on Header : header ethernet_h {
+  bit<48> dst_addr;
+  bit<48> src_addr;
+  bit<16> ether_type; }
+ComputeLoweredParserIR preorder on Header : header ipv4_h {
+  bit<4> version;
+  bit<4> ihl;
+  bit<8> diffserv;
+  bit<16> total_len;
+  bit<16> identification;
+  bit<3> flags;
+  bit<13> frag_offset;
+  bit<8> ttl;
+  bit<8> protocol;
+  bit<16> hdr_checksum;
+  bit<32> src_addr;
+  bit<32> dst_addr; }
+ComputeLoweredParserIR preorder on Header : header udp_h {
+  bit<16> src_port;
+  bit<16> dst_port;
+  bit<16> len;
+  bit<16> checksum; }
+ComputeLoweredParserIR preorder on Header : header egress_intrinsic_metadata_t @__intrinsic_metadata {
+  @padding @__intrinsic_metadata bit<7> _pad0;
+  @__intrinsic_metadata bit<9> egress_port;
+  @padding @__intrinsic_metadata bit<5> _pad1;
+  @__intrinsic_metadata bit<19> enq_qdepth;
+  @padding @__intrinsic_metadata bit<6> _pad2;
+  @__intrinsic_metadata bit<2> enq_congest_stat;
+  @padding @__intrinsic_metadata bit<14> _pad3;
+  @__intrinsic_metadata bit<18> enq_tstamp;
+  @padding @__intrinsic_metadata bit<5> _pad4;
+  @__intrinsic_metadata bit<19> deq_qdepth;
+  @padding @__intrinsic_metadata bit<6> _pad5;
+  @__intrinsic_metadata bit<2> deq_congest_stat;
+  @__intrinsic_metadata bit<8> app_pool_congest_stat;
+  @padding @__intrinsic_metadata bit<14> _pad6;
+  @__intrinsic_metadata bit<18> deq_timedelta;
+  @__intrinsic_metadata bit<16> egress_rid;
+  @padding @__intrinsic_metadata bit<7> _pad7;
+  @__intrinsic_metadata bit<1> egress_rid_first;
+  @padding @__intrinsic_metadata bit<3> _pad8;
+  @__intrinsic_metadata bit<5> egress_qid;
+  @padding @__intrinsic_metadata bit<5> _pad9;
+  @__intrinsic_metadata bit<3> egress_cos;
+  @padding @__intrinsic_metadata bit<7> _pad10;
+  @__intrinsic_metadata bit<1> deflection_flag;
+  @__intrinsic_metadata bit<16> pkt_length; }

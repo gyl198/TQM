@@ -1,0 +1,73 @@
+digraph ingress {
+cond_5 [ shape=record, style="filled", fillcolor=cornsilk, label="hdr.timer.$valid == 1\l\l
+ "];
+tbl_recirc [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_recirc\l\l
+W:\l
+ ig_intr_md_for_tm.ucast_egress_port\l
+ hdr.p4_header.egress_port\l
+ "];
+forward_t_0 [ shape=record, style="filled", fillcolor=cornsilk, label="forward_t_0\l\l
+M:\l
+ ig_intr_md.ingress_port\l
+\lW:\l
+ ig_intr_md_for_tm.ucast_egress_port\l
+ hdr.p4_header.egress_port\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+cond_6 [ shape=record, style="filled", fillcolor=cornsilk, label="hdr.timer.again == 1\l\l
+ "];
+tbl_set_drop_prob [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_set_drop_prob\l\l
+R:\l
+ hdr.p4_header.drop_prob\l
+\l "];
+tbl_drop [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_drop\l\l
+W:\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+tbl_set_p4_header [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_set_p4_header\l\l
+R:\l
+ ig_intr_md_from_prsr.global_tstamp\l
+\lW:\l
+ hdr.p4_header.delay\l
+ "];
+tbl_get_drop_prob [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_get_drop_prob\l\l
+R:\l
+ hdr.p4_header.drop_prob\l
+\lW:\l
+ meta.drop_prob\l
+ "];
+tbl_get_rndnum [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_get_rndnum\l\l
+W:\l
+ meta.rndnum\l
+ "];
+tbl_get_diff [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_get_diff\l\l
+R:\l
+ meta.rndnum\l
+ meta.drop_prob\l
+\lW:\l
+ meta.diff\l
+ "];
+cond_7 [ shape=record, style="filled", fillcolor=cornsilk, label="meta.diff == 0\l\l
+ "];
+tbl_drop_0 [ shape=record, style="filled", fillcolor=cornsilk, label="tbl_drop_0\l\l
+W:\l
+ ig_intr_md_for_dprsr.drop_ctl\l
+ "];
+    PARSER -> cond_5
+    cond_5 -> tbl_recirc
+    PARSER -> cond_5
+    cond_5 -> forward_t_0
+    tbl_recirc -> cond_6
+    cond_6 -> tbl_set_drop_prob
+    cond_6 -> DEPARSER
+    tbl_set_drop_prob -> tbl_drop
+    tbl_drop -> DEPARSER
+    forward_t_0 -> tbl_set_p4_header
+    tbl_set_p4_header -> tbl_get_drop_prob
+    tbl_get_drop_prob -> tbl_get_rndnum
+    tbl_get_rndnum -> tbl_get_diff
+    tbl_get_diff -> cond_7
+    cond_7 -> tbl_drop_0
+    cond_7 -> DEPARSER
+    tbl_drop_0 -> DEPARSER
+}

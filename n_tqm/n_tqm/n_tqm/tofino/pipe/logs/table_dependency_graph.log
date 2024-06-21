@@ -1,0 +1,803 @@
+FindDependencyGraph : After Instruction Selection
+ingress: [1948438] 0 00 000 0000
+  cond-6(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948727]
+      tbl_drop
+    $false: [1948504] 0
+      multicast_t_0 @stage(0)
+      tbl_set_p4_header
+  cond-7(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948869]
+      tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob  512
+    $false: [1948871]
+      tbl_get_drop_prob
+        stateful Ingress.reg_drop_prob  512
+  tbl_get_rndnum
+  tbl_get_diff
+  cond-8(ingress::meta.diff == 0; => $true, 1 => $false)
+    $true: [1949068]
+      tbl_drop_0
+egress: [1956684] 0 00 000
+  mod_dst_mac_t_0 @stage(0)
+  tbl_mod_header
+  cond-9(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1956955]
+      tbl_get_weighted_qdepth
+  cond-10(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1957256]
+      tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth  512
+    $false: [1957027] 0 00
+      tbl_get_ewma
+        stateful Egress.reg_aver_qdepth  512
+      tbl_get_qdepth
+      map_qdepth_to_prob_t_0
+
+DepStagesThruDomFrontier postorder : tbl_drop
+DepStagesThruDomFrontier postorder : multicast_t_0
+DepStagesThruDomFrontier postorder : tbl_set_p4_header
+DepStagesThruDomFrontier postorder : cond-6
+DepStagesThruDomFrontier postorder : tbl_set_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_drop_prob
+DepStagesThruDomFrontier postorder : cond-7
+DepStagesThruDomFrontier postorder : tbl_get_rndnum
+DepStagesThruDomFrontier postorder : tbl_get_diff
+DepStagesThruDomFrontier postorder : tbl_drop_0
+DepStagesThruDomFrontier postorder : cond-8
+DepStagesThruDomFrontier postorder : mod_dst_mac_t_0
+DepStagesThruDomFrontier postorder : tbl_mod_header
+DepStagesThruDomFrontier postorder : tbl_get_weighted_qdepth
+DepStagesThruDomFrontier postorder : cond-9
+DepStagesThruDomFrontier postorder : tbl_get_ewma
+DepStagesThruDomFrontier postorder : tbl_get_qdepth
+DepStagesThruDomFrontier postorder : map_qdepth_to_prob_t_0
+DepStagesThruDomFrontier postorder : tbl_set_qdepth
+DepStagesThruDomFrontier postorder : cond-10
+    Maximum stage number according to dependences: 
+      INGRESS: 3
+      EGRESS: 4
+GRAPH
+    cond-6 -- CONTROL_COND_TRUE --> tbl_drop
+    cond-6 -- CONTROL_COND_FALSE --> multicast_t_0
+    cond-6 -- CONTROL_COND_FALSE --> tbl_set_p4_header
+    cond-7 -- CONTROL_COND_TRUE --> tbl_set_drop_prob
+    cond-7 -- CONTROL_COND_FALSE --> tbl_get_drop_prob
+    cond-8 -- CONTROL_COND_TRUE --> tbl_drop_0
+    cond-9 -- CONTROL_COND_TRUE --> tbl_get_weighted_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_ewma
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> map_qdepth_to_prob_t_0
+    cond-10 -- CONTROL_COND_TRUE --> tbl_set_qdepth
+    tbl_set_p4_header -- IXBAR_READ --> tbl_set_drop_prob
+    multicast_t_0 -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_set_p4_header -- IXBAR_READ --> tbl_get_drop_prob
+    multicast_t_0 -- IXBAR_READ --> tbl_get_drop_prob
+    tbl_get_rndnum -- ACTION_READ --> tbl_get_diff
+    tbl_get_drop_prob -- ACTION_READ --> tbl_get_diff
+    tbl_get_diff -- ACTION_READ --> cond-8
+    tbl_drop -- OUTPUT --> tbl_drop_0
+    tbl_mod_header -- ACTION_READ --> tbl_get_weighted_qdepth
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_get_ewma
+    tbl_get_ewma -- ACTION_READ --> tbl_get_qdepth
+    tbl_get_qdepth -- IXBAR_READ --> map_qdepth_to_prob_t_0
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_set_qdepth
+    tbl_get_qdepth -- ANTI_NEXT_TABLE_DATA --> map_qdepth_to_prob_t_0
+    tbl_get_ewma -- ANTI_NEXT_TABLE_DATA --> tbl_get_qdepth
+    tbl_get_diff -- ANTI_NEXT_TABLE_DATA --> cond-8
+    tbl_get_drop_prob -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_get_weighted_qdepth -- ANTI_NEXT_TABLE_DATA --> cond-10
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> cond-8
+    multicast_t_0 -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_set_p4_header -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_get_rndnum -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> cond-9
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-6 3 3
+     tbl_drop 1 1
+	- Edge CONTROL_COND_TRUE cond-6
+     multicast_t_0 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     tbl_set_p4_header 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     cond-7 2 2
+	- Edge ANTI_NEXT_TABLE_DATA multicast_t_0
+	- Edge ANTI_NEXT_TABLE_DATA tbl_set_p4_header
+     cond-9 3 3
+	- Edge ANTI_NEXT_TABLE_DATA tbl_mod_header
+     tbl_get_rndnum 2 2
+     mod_dst_mac_t_0 0 0
+     tbl_mod_header 4 4
+ Stage #1
+     tbl_set_drop_prob 0 0
+	- Edge IXBAR_READ tbl_set_p4_header
+	- Edge IXBAR_READ multicast_t_0
+     tbl_get_drop_prob 2 2
+	- Edge IXBAR_READ tbl_set_p4_header
+	- Edge IXBAR_READ multicast_t_0
+     tbl_get_weighted_qdepth 3 3
+	- Edge ACTION_READ tbl_mod_header
+     cond-10 2 2
+	- Edge ANTI_NEXT_TABLE_DATA tbl_get_weighted_qdepth
+ Stage #2
+     tbl_get_ewma 2 2
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_set_qdepth 0 0
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_get_diff 1 1
+	- Edge ACTION_READ tbl_get_drop_prob
+ Stage #3
+     cond-8 0 0
+	- Edge ACTION_READ tbl_get_diff
+     tbl_drop_0 0 0
+	- Edge CONTROL_COND_TRUE cond-8
+     tbl_get_qdepth 1 1
+	- Edge ACTION_READ tbl_get_ewma
+ Stage #4
+     map_qdepth_to_prob_t_0 0 0
+	- Edge IXBAR_READ tbl_get_qdepth
+
+FindDependencyGraph : Just Before PHV allocation
+ingress: [1948438] 0 00 000 0000
+  cond-6(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948727]
+      tbl_drop
+    $false: [1948504] 0
+      multicast_t_0 @stage(0)
+      tbl_set_p4_header
+  cond-7(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948869]
+      tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob  512
+    $false: [1948871]
+      tbl_get_drop_prob
+        stateful Ingress.reg_drop_prob  512
+  tbl_get_rndnum
+  tbl_get_diff
+  cond-8(ingress::meta.diff == 0; => $true, 1 => $false)
+    $true: [1949068]
+      tbl_drop_0
+egress: [1956684] 0 00 000
+  mod_dst_mac_t_0 @stage(0)
+  tbl_mod_header
+  cond-9(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1956955]
+      tbl_get_weighted_qdepth
+  cond-10(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1957256]
+      tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth  512
+    $false: [1957027] 0 00
+      tbl_get_ewma
+        stateful Egress.reg_aver_qdepth  512
+      tbl_get_qdepth
+      map_qdepth_to_prob_t_0
+
+DepStagesThruDomFrontier postorder : tbl_drop
+DepStagesThruDomFrontier postorder : multicast_t_0
+DepStagesThruDomFrontier postorder : tbl_set_p4_header
+DepStagesThruDomFrontier postorder : cond-6
+DepStagesThruDomFrontier postorder : tbl_set_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_drop_prob
+DepStagesThruDomFrontier postorder : cond-7
+DepStagesThruDomFrontier postorder : tbl_get_rndnum
+DepStagesThruDomFrontier postorder : tbl_get_diff
+DepStagesThruDomFrontier postorder : tbl_drop_0
+DepStagesThruDomFrontier postorder : cond-8
+DepStagesThruDomFrontier postorder : mod_dst_mac_t_0
+DepStagesThruDomFrontier postorder : tbl_mod_header
+DepStagesThruDomFrontier postorder : tbl_get_weighted_qdepth
+DepStagesThruDomFrontier postorder : cond-9
+DepStagesThruDomFrontier postorder : tbl_get_ewma
+DepStagesThruDomFrontier postorder : tbl_get_qdepth
+DepStagesThruDomFrontier postorder : map_qdepth_to_prob_t_0
+DepStagesThruDomFrontier postorder : tbl_set_qdepth
+DepStagesThruDomFrontier postorder : cond-10
+    Maximum stage number according to dependences: 
+      INGRESS: 3
+      EGRESS: 4
+GRAPH
+    cond-6 -- CONTROL_COND_TRUE --> tbl_drop
+    cond-6 -- CONTROL_COND_FALSE --> multicast_t_0
+    cond-6 -- CONTROL_COND_FALSE --> tbl_set_p4_header
+    cond-7 -- CONTROL_COND_TRUE --> tbl_set_drop_prob
+    cond-7 -- CONTROL_COND_FALSE --> tbl_get_drop_prob
+    cond-8 -- CONTROL_COND_TRUE --> tbl_drop_0
+    cond-9 -- CONTROL_COND_TRUE --> tbl_get_weighted_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_ewma
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> map_qdepth_to_prob_t_0
+    cond-10 -- CONTROL_COND_TRUE --> tbl_set_qdepth
+    multicast_t_0 -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_set_p4_header -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_set_p4_header -- IXBAR_READ --> tbl_get_drop_prob
+    multicast_t_0 -- IXBAR_READ --> tbl_get_drop_prob
+    tbl_get_rndnum -- ACTION_READ --> tbl_get_diff
+    tbl_get_drop_prob -- ACTION_READ --> tbl_get_diff
+    tbl_get_diff -- ACTION_READ --> cond-8
+    tbl_drop -- OUTPUT --> tbl_drop_0
+    tbl_mod_header -- ACTION_READ --> tbl_get_weighted_qdepth
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_get_ewma
+    tbl_get_ewma -- ACTION_READ --> tbl_get_qdepth
+    tbl_get_qdepth -- IXBAR_READ --> map_qdepth_to_prob_t_0
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_set_qdepth
+    tbl_get_qdepth -- ANTI_NEXT_TABLE_DATA --> map_qdepth_to_prob_t_0
+    tbl_get_ewma -- ANTI_NEXT_TABLE_DATA --> tbl_get_qdepth
+    tbl_get_diff -- ANTI_NEXT_TABLE_DATA --> cond-8
+    tbl_get_drop_prob -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_get_weighted_qdepth -- ANTI_NEXT_TABLE_DATA --> cond-10
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> cond-8
+    multicast_t_0 -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_set_p4_header -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_get_rndnum -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> cond-9
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-6 3 3
+     tbl_drop 1 1
+	- Edge CONTROL_COND_TRUE cond-6
+     multicast_t_0 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     tbl_set_p4_header 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     cond-7 2 2
+	- Edge ANTI_NEXT_TABLE_DATA multicast_t_0
+	- Edge ANTI_NEXT_TABLE_DATA tbl_set_p4_header
+     cond-9 3 3
+	- Edge ANTI_NEXT_TABLE_DATA tbl_mod_header
+     tbl_get_rndnum 2 2
+     mod_dst_mac_t_0 0 0
+     tbl_mod_header 4 4
+ Stage #1
+     tbl_set_drop_prob 0 0
+	- Edge IXBAR_READ multicast_t_0
+	- Edge IXBAR_READ tbl_set_p4_header
+     tbl_get_drop_prob 2 2
+	- Edge IXBAR_READ tbl_set_p4_header
+	- Edge IXBAR_READ multicast_t_0
+     tbl_get_weighted_qdepth 3 3
+	- Edge ACTION_READ tbl_mod_header
+     cond-10 2 2
+	- Edge ANTI_NEXT_TABLE_DATA tbl_get_weighted_qdepth
+ Stage #2
+     tbl_get_ewma 2 2
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_set_qdepth 0 0
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_get_diff 1 1
+	- Edge ACTION_READ tbl_get_drop_prob
+ Stage #3
+     cond-8 0 0
+	- Edge ACTION_READ tbl_get_diff
+     tbl_drop_0 0 0
+	- Edge CONTROL_COND_TRUE cond-8
+     tbl_get_qdepth 1 1
+	- Edge ACTION_READ tbl_get_ewma
+ Stage #4
+     map_qdepth_to_prob_t_0 0 0
+	- Edge IXBAR_READ tbl_get_qdepth
+
+ingress: [1948438] 1 00 111 1111
+  cond-6(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948727]
+      tbl_drop
+    $false: [1948504] 0
+      multicast_t_0{ E -1+0, 4 0K } @stage(0)
+      tbl_set_p4_header
+  cond-7(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948869]
+      tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob  512
+    $false: [1948871]
+      tbl_get_drop_prob
+        stateful Ingress.reg_drop_prob  512
+  tbl_get_rndnum
+  tbl_get_diff
+  cond-8(ingress::meta.diff == 0; => $true, 1 => $false)
+    $true: [1949068]
+      tbl_drop_0
+egress: [1956684] 0 01 011
+  mod_dst_mac_t_0{ E -1+0, 8 0K } @stage(0)
+  tbl_mod_header
+  cond-9(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1956955]
+      tbl_get_weighted_qdepth
+  cond-10(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1957256]
+      tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth  512
+    $false: [1957027] 1 11
+      tbl_get_ewma
+        stateful Egress.reg_aver_qdepth  512
+      tbl_get_qdepth
+      map_qdepth_to_prob_t_0{ E 6+0, 4 64K }
+
+DepStagesThruDomFrontier postorder : tbl_drop
+DepStagesThruDomFrontier postorder : multicast_t_0
+DepStagesThruDomFrontier postorder : tbl_set_p4_header
+DepStagesThruDomFrontier postorder : cond-6
+DepStagesThruDomFrontier postorder : tbl_set_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_drop_prob
+DepStagesThruDomFrontier postorder : cond-7
+DepStagesThruDomFrontier postorder : tbl_get_rndnum
+DepStagesThruDomFrontier postorder : tbl_get_diff
+DepStagesThruDomFrontier postorder : tbl_drop_0
+DepStagesThruDomFrontier postorder : cond-8
+DepStagesThruDomFrontier postorder : mod_dst_mac_t_0
+DepStagesThruDomFrontier postorder : tbl_mod_header
+DepStagesThruDomFrontier postorder : tbl_get_weighted_qdepth
+DepStagesThruDomFrontier postorder : cond-9
+DepStagesThruDomFrontier postorder : tbl_get_ewma
+DepStagesThruDomFrontier postorder : tbl_get_qdepth
+DepStagesThruDomFrontier postorder : map_qdepth_to_prob_t_0
+DepStagesThruDomFrontier postorder : tbl_set_qdepth
+DepStagesThruDomFrontier postorder : cond-10
+    Maximum stage number according to dependences: 
+      INGRESS: 3
+      EGRESS: 4
+GRAPH
+    cond-6 -- CONTROL_COND_TRUE --> tbl_drop
+    cond-6 -- CONTROL_COND_FALSE --> multicast_t_0
+    cond-6 -- CONTROL_COND_FALSE --> tbl_set_p4_header
+    cond-7 -- CONTROL_COND_TRUE --> tbl_set_drop_prob
+    cond-7 -- CONTROL_COND_FALSE --> tbl_get_drop_prob
+    cond-8 -- CONTROL_COND_TRUE --> tbl_drop_0
+    cond-9 -- CONTROL_COND_TRUE --> tbl_get_weighted_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_ewma
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> map_qdepth_to_prob_t_0
+    cond-10 -- CONTROL_COND_TRUE --> tbl_set_qdepth
+    tbl_mod_header -- ANTI_NEXT_TABLE_METADATA --> map_qdepth_to_prob_t_0
+    tbl_mod_header -- ANTI_NEXT_TABLE_METADATA --> tbl_get_qdepth
+    multicast_t_0 -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_set_p4_header -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_set_p4_header -- IXBAR_READ --> tbl_get_drop_prob
+    multicast_t_0 -- IXBAR_READ --> tbl_get_drop_prob
+    tbl_get_rndnum -- ACTION_READ --> tbl_get_diff
+    tbl_get_drop_prob -- ACTION_READ --> tbl_get_diff
+    tbl_get_diff -- ACTION_READ --> cond-8
+    tbl_drop -- OUTPUT --> tbl_drop_0
+    tbl_mod_header -- ACTION_READ --> tbl_get_weighted_qdepth
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_get_ewma
+    tbl_get_ewma -- ACTION_READ --> tbl_get_qdepth
+    tbl_get_qdepth -- IXBAR_READ --> map_qdepth_to_prob_t_0
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_set_qdepth
+    tbl_get_qdepth -- ANTI_NEXT_TABLE_DATA --> map_qdepth_to_prob_t_0
+    tbl_get_ewma -- ANTI_NEXT_TABLE_DATA --> tbl_get_qdepth
+    tbl_get_diff -- ANTI_NEXT_TABLE_DATA --> cond-8
+    tbl_get_drop_prob -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_get_weighted_qdepth -- ANTI_NEXT_TABLE_DATA --> cond-10
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> cond-8
+    multicast_t_0 -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_set_p4_header -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> cond-10
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> cond-9
+    tbl_get_rndnum -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-6 3 3
+     tbl_drop 1 1
+	- Edge CONTROL_COND_TRUE cond-6
+     multicast_t_0 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     tbl_set_p4_header 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     cond-7 2 2
+	- Edge ANTI_NEXT_TABLE_DATA multicast_t_0
+	- Edge ANTI_NEXT_TABLE_DATA tbl_set_p4_header
+     cond-9 3 3
+	- Edge ANTI_NEXT_TABLE_DATA tbl_mod_header
+     tbl_mod_header 4 4
+     tbl_get_rndnum 2 2
+     mod_dst_mac_t_0 0 0
+ Stage #1
+     tbl_set_drop_prob 0 0
+	- Edge IXBAR_READ multicast_t_0
+	- Edge IXBAR_READ tbl_set_p4_header
+     tbl_get_drop_prob 2 2
+	- Edge IXBAR_READ tbl_set_p4_header
+	- Edge IXBAR_READ multicast_t_0
+     tbl_get_weighted_qdepth 3 3
+	- Edge ACTION_READ tbl_mod_header
+     cond-10 2 2
+	- Edge ANTI_NEXT_TABLE_DATA tbl_get_weighted_qdepth
+ Stage #2
+     tbl_get_ewma 2 2
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_set_qdepth 0 0
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_get_diff 1 1
+	- Edge ACTION_READ tbl_get_drop_prob
+ Stage #3
+     cond-8 0 0
+	- Edge ACTION_READ tbl_get_diff
+     tbl_drop_0 0 0
+	- Edge CONTROL_COND_TRUE cond-8
+     tbl_get_qdepth 1 1
+	- Edge ACTION_READ tbl_get_ewma
+ Stage #4
+     map_qdepth_to_prob_t_0 0 0
+	- Edge IXBAR_READ tbl_get_qdepth
+
+FindDependencyGraph : Before Table Placement
+ingress: [1948438] 1 00 111 1111
+  cond-6(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948727]
+      tbl_drop
+    $false: [1948504] 0
+      multicast_t_0{ E -1+0, 4 0K } @stage(0)
+      tbl_set_p4_header
+  cond-7(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948869]
+      tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob  512
+    $false: [1948871]
+      tbl_get_drop_prob
+        stateful Ingress.reg_drop_prob  512
+  tbl_get_rndnum
+  tbl_get_diff
+  cond-8(ingress::meta.diff == 0; => $true, 1 => $false)
+    $true: [1949068]
+      tbl_drop_0
+egress: [1956684] 0 01 011
+  mod_dst_mac_t_0{ E -1+0, 8 0K } @stage(0)
+  tbl_mod_header
+  cond-9(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1956955]
+      tbl_get_weighted_qdepth
+  cond-10(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1957256]
+      tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth  512
+    $false: [1957027] 1 11
+      tbl_get_ewma
+        stateful Egress.reg_aver_qdepth  512
+      tbl_get_qdepth
+      map_qdepth_to_prob_t_0{ E 6+0, 4 64K }
+
+DepStagesThruDomFrontier postorder : tbl_drop
+DepStagesThruDomFrontier postorder : multicast_t_0
+DepStagesThruDomFrontier postorder : tbl_set_p4_header
+DepStagesThruDomFrontier postorder : cond-6
+DepStagesThruDomFrontier postorder : tbl_set_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_drop_prob
+DepStagesThruDomFrontier postorder : cond-7
+DepStagesThruDomFrontier postorder : tbl_get_rndnum
+DepStagesThruDomFrontier postorder : tbl_get_diff
+DepStagesThruDomFrontier postorder : tbl_drop_0
+DepStagesThruDomFrontier postorder : cond-8
+DepStagesThruDomFrontier postorder : mod_dst_mac_t_0
+DepStagesThruDomFrontier postorder : tbl_mod_header
+DepStagesThruDomFrontier postorder : tbl_get_weighted_qdepth
+DepStagesThruDomFrontier postorder : cond-9
+DepStagesThruDomFrontier postorder : tbl_get_ewma
+DepStagesThruDomFrontier postorder : tbl_get_qdepth
+DepStagesThruDomFrontier postorder : map_qdepth_to_prob_t_0
+DepStagesThruDomFrontier postorder : tbl_set_qdepth
+DepStagesThruDomFrontier postorder : cond-10
+    Maximum stage number according to dependences: 
+      INGRESS: 3
+      EGRESS: 4
+GRAPH
+    cond-6 -- CONTROL_COND_TRUE --> tbl_drop
+    cond-6 -- CONTROL_COND_FALSE --> multicast_t_0
+    cond-6 -- CONTROL_COND_FALSE --> tbl_set_p4_header
+    cond-7 -- CONTROL_COND_TRUE --> tbl_set_drop_prob
+    cond-7 -- CONTROL_COND_FALSE --> tbl_get_drop_prob
+    cond-8 -- CONTROL_COND_TRUE --> tbl_drop_0
+    cond-9 -- CONTROL_COND_TRUE --> tbl_get_weighted_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_ewma
+    cond-10 -- CONTROL_COND_FALSE --> tbl_get_qdepth
+    cond-10 -- CONTROL_COND_FALSE --> map_qdepth_to_prob_t_0
+    cond-10 -- CONTROL_COND_TRUE --> tbl_set_qdepth
+    tbl_mod_header -- ANTI_NEXT_TABLE_METADATA --> map_qdepth_to_prob_t_0
+    tbl_mod_header -- ANTI_NEXT_TABLE_METADATA --> tbl_get_qdepth
+    multicast_t_0 -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_set_p4_header -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_set_p4_header -- IXBAR_READ --> tbl_get_drop_prob
+    multicast_t_0 -- IXBAR_READ --> tbl_get_drop_prob
+    tbl_get_rndnum -- ACTION_READ --> tbl_get_diff
+    tbl_get_drop_prob -- ACTION_READ --> tbl_get_diff
+    tbl_get_diff -- ACTION_READ --> cond-8
+    tbl_drop -- OUTPUT --> tbl_drop_0
+    tbl_mod_header -- ACTION_READ --> tbl_get_weighted_qdepth
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_get_ewma
+    tbl_get_ewma -- ACTION_READ --> tbl_get_qdepth
+    tbl_get_qdepth -- IXBAR_READ --> map_qdepth_to_prob_t_0
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_set_qdepth
+    tbl_get_qdepth -- ANTI_NEXT_TABLE_DATA --> map_qdepth_to_prob_t_0
+    tbl_get_ewma -- ANTI_NEXT_TABLE_DATA --> tbl_get_qdepth
+    tbl_get_diff -- ANTI_NEXT_TABLE_DATA --> cond-8
+    tbl_get_drop_prob -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_get_weighted_qdepth -- ANTI_NEXT_TABLE_DATA --> cond-10
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> cond-8
+    multicast_t_0 -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_set_p4_header -- ANTI_NEXT_TABLE_DATA --> cond-7
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> cond-10
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> cond-9
+    tbl_get_rndnum -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-6 3 3
+     tbl_drop 1 1
+	- Edge CONTROL_COND_TRUE cond-6
+     multicast_t_0 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     tbl_set_p4_header 3 3
+	- Edge CONTROL_COND_FALSE cond-6
+     cond-7 2 2
+	- Edge ANTI_NEXT_TABLE_DATA multicast_t_0
+	- Edge ANTI_NEXT_TABLE_DATA tbl_set_p4_header
+     cond-9 3 3
+	- Edge ANTI_NEXT_TABLE_DATA tbl_mod_header
+     tbl_mod_header 4 4
+     tbl_get_rndnum 2 2
+     mod_dst_mac_t_0 0 0
+ Stage #1
+     tbl_set_drop_prob 0 0
+	- Edge IXBAR_READ multicast_t_0
+	- Edge IXBAR_READ tbl_set_p4_header
+     tbl_get_drop_prob 2 2
+	- Edge IXBAR_READ tbl_set_p4_header
+	- Edge IXBAR_READ multicast_t_0
+     tbl_get_weighted_qdepth 3 3
+	- Edge ACTION_READ tbl_mod_header
+     cond-10 2 2
+	- Edge ANTI_NEXT_TABLE_DATA tbl_get_weighted_qdepth
+ Stage #2
+     tbl_get_ewma 2 2
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_set_qdepth 0 0
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_get_diff 1 1
+	- Edge ACTION_READ tbl_get_drop_prob
+ Stage #3
+     cond-8 0 0
+	- Edge ACTION_READ tbl_get_diff
+     tbl_drop_0 0 0
+	- Edge CONTROL_COND_TRUE cond-8
+     tbl_get_qdepth 1 1
+	- Edge ACTION_READ tbl_get_ewma
+ Stage #4
+     map_qdepth_to_prob_t_0 0 0
+	- Edge IXBAR_READ tbl_get_qdepth
+
+FindDependencyGraph : After Table Placement
+ingress: [1948438] 0 01 111 1111
+  1: tbl_get_rndnum
+  2: multicast_t_0(ingress::ig_intr_md.ingress_port == 68; => $true, 1){ GE -1+16, 2 [1x1 1K] } @stage(0)
+    $true: [1948727]
+      4: tbl_drop
+    $default: [1948504]
+      10: tbl_set_p4_header
+  20: tbl_get_drop_prob(ingress::ig_intr_md.ingress_port == 68; => $true, 1)
+    stateful Ingress.reg_drop_prob 512 
+    $true: [1948869]
+      21: tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob 512 
+  31: tbl_get_diff
+  41: tbl_drop_0(ingress::meta.diff == 0;, 1 => $false)
+    $false: [2066801]
+egress: [1956684] 0 01 011
+  0: mod_dst_mac_t_0{ E -1+32, 6 [1x1 1K] } @stage(0)
+  3: tbl_mod_header
+  11: tbl_get_weighted_qdepth(egress::eg_intr_md.egress_port == 68; => $false, 1)
+    $false: [2067108]
+  22: tbl_get_ewma(egress::eg_intr_md.egress_port == 68;, 1 => $true)
+    stateful Egress.reg_aver_qdepth 512 
+    $true: [1957256]
+      23: tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth 512 
+    $default: [1957027] 1
+      30: tbl_get_qdepth
+      40: map_qdepth_to_prob_t_0{ E 6+0, 4 64K }
+
+DepStagesThruDomFrontier postorder : tbl_get_rndnum
+DepStagesThruDomFrontier postorder : tbl_drop
+DepStagesThruDomFrontier postorder : tbl_set_p4_header
+DepStagesThruDomFrontier postorder : multicast_t_0
+DepStagesThruDomFrontier postorder : tbl_set_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_diff
+DepStagesThruDomFrontier postorder : tbl_drop_0
+DepStagesThruDomFrontier postorder : mod_dst_mac_t_0
+DepStagesThruDomFrontier postorder : tbl_mod_header
+DepStagesThruDomFrontier postorder : tbl_get_weighted_qdepth
+DepStagesThruDomFrontier postorder : tbl_set_qdepth
+DepStagesThruDomFrontier postorder : tbl_get_qdepth
+DepStagesThruDomFrontier postorder : map_qdepth_to_prob_t_0
+DepStagesThruDomFrontier postorder : tbl_get_ewma
+    Maximum stage number according to dependences: 
+      INGRESS: 3
+      EGRESS: 4
+GRAPH
+    multicast_t_0 -- CONTROL_COND_TRUE --> tbl_drop
+    multicast_t_0 -- CONTROL_DEFAULT_NEXT_TABLE --> tbl_set_p4_header
+    tbl_get_drop_prob -- CONTROL_COND_TRUE --> tbl_set_drop_prob
+    tbl_get_ewma -- CONTROL_COND_TRUE --> tbl_set_qdepth
+    tbl_get_ewma -- CONTROL_DEFAULT_NEXT_TABLE --> tbl_get_qdepth
+    tbl_get_ewma -- CONTROL_DEFAULT_NEXT_TABLE --> map_qdepth_to_prob_t_0
+    multicast_t_0 -- IXBAR_READ --> tbl_get_drop_prob
+    multicast_t_0 -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_get_rndnum -- ACTION_READ --> tbl_get_diff
+    tbl_get_drop_prob -- ACTION_READ --> tbl_get_diff
+    tbl_get_diff -- ACTION_READ --> tbl_drop_0
+    tbl_drop -- OUTPUT --> tbl_drop_0
+    tbl_mod_header -- ACTION_READ --> tbl_get_weighted_qdepth
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_get_ewma
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_set_qdepth
+    tbl_get_ewma -- ACTION_READ --> tbl_get_qdepth
+    tbl_get_qdepth -- IXBAR_READ --> map_qdepth_to_prob_t_0
+    tbl_get_qdepth -- ANTI_NEXT_TABLE_DATA --> map_qdepth_to_prob_t_0
+    tbl_get_diff -- ANTI_NEXT_TABLE_DATA --> tbl_drop_0
+    tbl_set_drop_prob -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_get_weighted_qdepth -- ANTI_NEXT_TABLE_DATA --> tbl_get_ewma
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> tbl_get_drop_prob
+    tbl_set_p4_header -- ANTI_NEXT_TABLE_DATA --> tbl_get_drop_prob
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> tbl_drop_0
+    tbl_get_rndnum -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> tbl_get_weighted_qdepth
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     multicast_t_0 3 3
+     tbl_drop 2 2
+	- Edge CONTROL_COND_TRUE multicast_t_0
+     tbl_set_p4_header 2 2
+	- Edge CONTROL_DEFAULT_NEXT_TABLE multicast_t_0
+     tbl_get_rndnum 2 2
+     mod_dst_mac_t_0 0 0
+     tbl_mod_header 4 4
+ Stage #1
+     tbl_get_drop_prob 2 2
+	- Edge IXBAR_READ multicast_t_0
+     tbl_set_drop_prob 1 1
+	- Edge CONTROL_COND_TRUE tbl_get_drop_prob
+	- Edge IXBAR_READ multicast_t_0
+     tbl_get_weighted_qdepth 3 3
+	- Edge ACTION_READ tbl_mod_header
+ Stage #2
+     tbl_get_ewma 2 2
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_set_qdepth 0 0
+	- Edge CONTROL_COND_TRUE tbl_get_ewma
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_get_diff 1 1
+	- Edge ACTION_READ tbl_get_drop_prob
+ Stage #3
+     tbl_get_qdepth 1 1
+	- Edge ACTION_READ tbl_get_ewma
+     tbl_drop_0 0 0
+	- Edge ACTION_READ tbl_get_diff
+ Stage #4
+     map_qdepth_to_prob_t_0 0 0
+	- Edge IXBAR_READ tbl_get_qdepth
+
+FindDependencyGraph : Power Calculation
+ingress: [1948438] 0 01 111 1111
+  1: tbl_get_rndnum
+  2: multicast_t_0(ingress::ig_intr_md.ingress_port == 68; => $true, 1){ GE -1+16, 2 [1x1 1K] } @stage(0)
+    $true: [1948727]
+      4: tbl_drop
+    $default: [1948504]
+      10: tbl_set_p4_header
+  20: tbl_get_drop_prob(ingress::ig_intr_md.ingress_port == 68; => $true, 1)
+    stateful Ingress.reg_drop_prob 512 
+    $true: [1948869]
+      21: tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob 512 
+  31: tbl_get_diff
+  41: tbl_drop_0(ingress::meta.diff == 0;, 1 => $false)
+    $false: [2066801]
+egress: [1956684] 0 01 011
+  0: mod_dst_mac_t_0{ E -1+32, 6 [1x1 1K] } @stage(0)
+  3: tbl_mod_header
+  11: tbl_get_weighted_qdepth(egress::eg_intr_md.egress_port == 68; => $false, 1)
+    $false: [2067108]
+  22: tbl_get_ewma(egress::eg_intr_md.egress_port == 68;, 1 => $true)
+    stateful Egress.reg_aver_qdepth 512 
+    $true: [1957256]
+      23: tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth 512 
+    $default: [1957027] 1
+      30: tbl_get_qdepth
+      40: map_qdepth_to_prob_t_0{ E 6+0, 4 64K }
+
+DepStagesThruDomFrontier postorder : tbl_get_rndnum
+DepStagesThruDomFrontier postorder : tbl_drop
+DepStagesThruDomFrontier postorder : tbl_set_p4_header
+DepStagesThruDomFrontier postorder : multicast_t_0
+DepStagesThruDomFrontier postorder : tbl_set_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_drop_prob
+DepStagesThruDomFrontier postorder : tbl_get_diff
+DepStagesThruDomFrontier postorder : tbl_drop_0
+DepStagesThruDomFrontier postorder : mod_dst_mac_t_0
+DepStagesThruDomFrontier postorder : tbl_mod_header
+DepStagesThruDomFrontier postorder : tbl_get_weighted_qdepth
+DepStagesThruDomFrontier postorder : tbl_set_qdepth
+DepStagesThruDomFrontier postorder : tbl_get_qdepth
+DepStagesThruDomFrontier postorder : map_qdepth_to_prob_t_0
+DepStagesThruDomFrontier postorder : tbl_get_ewma
+    Maximum stage number according to dependences: 
+      INGRESS: 3
+      EGRESS: 4
+GRAPH
+    multicast_t_0 -- CONTROL_COND_TRUE --> tbl_drop
+    multicast_t_0 -- CONTROL_DEFAULT_NEXT_TABLE --> tbl_set_p4_header
+    tbl_get_drop_prob -- CONTROL_COND_TRUE --> tbl_set_drop_prob
+    tbl_get_ewma -- CONTROL_COND_TRUE --> tbl_set_qdepth
+    tbl_get_ewma -- CONTROL_DEFAULT_NEXT_TABLE --> tbl_get_qdepth
+    tbl_get_ewma -- CONTROL_DEFAULT_NEXT_TABLE --> map_qdepth_to_prob_t_0
+    multicast_t_0 -- IXBAR_READ --> tbl_get_drop_prob
+    multicast_t_0 -- IXBAR_READ --> tbl_set_drop_prob
+    tbl_get_rndnum -- ACTION_READ --> tbl_get_diff
+    tbl_get_drop_prob -- ACTION_READ --> tbl_get_diff
+    tbl_get_diff -- ACTION_READ --> tbl_drop_0
+    tbl_drop -- OUTPUT --> tbl_drop_0
+    tbl_mod_header -- ACTION_READ --> tbl_get_weighted_qdepth
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_get_ewma
+    tbl_get_weighted_qdepth -- IXBAR_READ --> tbl_set_qdepth
+    tbl_get_ewma -- ACTION_READ --> tbl_get_qdepth
+    tbl_get_qdepth -- IXBAR_READ --> map_qdepth_to_prob_t_0
+    tbl_get_qdepth -- ANTI_NEXT_TABLE_DATA --> map_qdepth_to_prob_t_0
+    tbl_get_diff -- ANTI_NEXT_TABLE_DATA --> tbl_drop_0
+    tbl_set_drop_prob -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_get_weighted_qdepth -- ANTI_NEXT_TABLE_DATA --> tbl_get_ewma
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> tbl_get_drop_prob
+    tbl_set_p4_header -- ANTI_NEXT_TABLE_DATA --> tbl_get_drop_prob
+    tbl_drop -- ANTI_NEXT_TABLE_DATA --> tbl_drop_0
+    tbl_get_rndnum -- ANTI_NEXT_TABLE_DATA --> tbl_get_diff
+    tbl_mod_header -- ANTI_NEXT_TABLE_DATA --> tbl_get_weighted_qdepth
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     multicast_t_0 3 3
+     tbl_drop 2 2
+	- Edge CONTROL_COND_TRUE multicast_t_0
+     tbl_set_p4_header 2 2
+	- Edge CONTROL_DEFAULT_NEXT_TABLE multicast_t_0
+     tbl_get_rndnum 2 2
+     mod_dst_mac_t_0 0 0
+     tbl_mod_header 4 4
+ Stage #1
+     tbl_get_drop_prob 2 2
+	- Edge IXBAR_READ multicast_t_0
+     tbl_set_drop_prob 1 1
+	- Edge CONTROL_COND_TRUE tbl_get_drop_prob
+	- Edge IXBAR_READ multicast_t_0
+     tbl_get_weighted_qdepth 3 3
+	- Edge ACTION_READ tbl_mod_header
+ Stage #2
+     tbl_get_ewma 2 2
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_set_qdepth 0 0
+	- Edge CONTROL_COND_TRUE tbl_get_ewma
+	- Edge IXBAR_READ tbl_get_weighted_qdepth
+     tbl_get_diff 1 1
+	- Edge ACTION_READ tbl_get_drop_prob
+ Stage #3
+     tbl_get_qdepth 1 1
+	- Edge ACTION_READ tbl_get_ewma
+     tbl_drop_0 0 0
+	- Edge ACTION_READ tbl_get_diff
+ Stage #4
+     map_qdepth_to_prob_t_0 0 0
+	- Edge IXBAR_READ tbl_get_qdepth
+

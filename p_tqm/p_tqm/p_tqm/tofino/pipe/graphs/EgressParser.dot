@@ -1,0 +1,18 @@
+digraph EgressParser{
+start [shape=rectangle,label="start
+(eg_intr_md.egress_port)"]
+parse_timer [shape=rectangle,label="parse_timer"]
+parse_ethernet [shape=rectangle,label="parse_ethernet
+(hdr.ipv4.protocol)"]
+parse_udp [shape=rectangle,label="parse_udp"]
+parse_p4_header [shape=rectangle,label="parse_p4_header"]
+accept [shape=rectangle,label="accept"]
+reject [shape=rectangle,label="reject"]
+start -> parse_timer [label="9w68"]
+start -> parse_ethernet [label="default"]
+parse_timer -> parse_p4_header [label="always"]
+parse_ethernet -> parse_udp [label="8w0x11"]
+parse_ethernet -> accept [label="default"]
+parse_udp -> parse_p4_header [label="always"]
+parse_p4_header -> accept [label="always"]
+}

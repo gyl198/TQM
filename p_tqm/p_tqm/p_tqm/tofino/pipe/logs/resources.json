@@ -1,0 +1,5408 @@
+{
+  "resources": {
+    "phv_containers": {
+      "normal": [
+        {
+          "units": 64,
+          "width": 8,
+          "addresses": [
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127
+          ]
+        },
+        {
+          "units": 96,
+          "width": 16,
+          "addresses": [
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222,
+            223
+          ]
+        },
+        {
+          "units": 64,
+          "width": 32,
+          "addresses": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ]
+        }
+      ],
+      "tagalong": [
+        {
+          "units": 32,
+          "width": 8,
+          "addresses": [
+            288,
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314,
+            315,
+            316,
+            317,
+            318,
+            319
+          ]
+        },
+        {
+          "units": 48,
+          "width": 16,
+          "addresses": [
+            320,
+            321,
+            322,
+            323,
+            324,
+            325,
+            326,
+            327,
+            328,
+            329,
+            330,
+            331,
+            332,
+            333,
+            334,
+            335,
+            336,
+            337,
+            338,
+            339,
+            340,
+            341,
+            342,
+            343,
+            344,
+            345,
+            346,
+            347,
+            348,
+            349,
+            350,
+            351,
+            352,
+            353,
+            354,
+            355,
+            356,
+            357,
+            358,
+            359,
+            360,
+            361,
+            362,
+            363,
+            364,
+            365,
+            366,
+            367
+          ]
+        },
+        {
+          "units": 32,
+          "width": 32,
+          "addresses": [
+            256,
+            257,
+            258,
+            259,
+            260,
+            261,
+            262,
+            263,
+            264,
+            265,
+            266,
+            267,
+            268,
+            269,
+            270,
+            271,
+            272,
+            273,
+            274,
+            275,
+            276,
+            277,
+            278,
+            279,
+            280,
+            281,
+            282,
+            283,
+            284,
+            285,
+            286,
+            287
+          ]
+        }
+      ]
+    },
+    "mau": {
+      "nStages": 12,
+      "mau_stages": [
+        {
+          "tind_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_set_p4_header",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_recirc",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 1
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_p_tqm486",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 2
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_mod_header",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 3
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_drop",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 4
+              }
+            ],
+            "size": 16
+          },
+          "action_bus_bytes": {
+            "bytes": [
+              {
+                "byte_number": 32,
+                "used_by_tables": [
+                  "Ingress.forward_t"
+                ]
+              },
+              {
+                "byte_number": 33,
+                "used_by_tables": [
+                  "Ingress.forward_t"
+                ]
+              },
+              {
+                "byte_number": 96,
+                "used_by_tables": [
+                  "Ingress.forward_t"
+                ]
+              },
+              {
+                "byte_number": 97,
+                "used_by_tables": [
+                  "Ingress.forward_t"
+                ]
+              },
+              {
+                "byte_number": 98,
+                "used_by_tables": [
+                  "Ingress.forward_t"
+                ]
+              },
+              {
+                "byte_number": 99,
+                "used_by_tables": [
+                  "Ingress.forward_t"
+                ]
+              },
+              {
+                "byte_number": 40,
+                "used_by_tables": [
+                  "tbl_recirc"
+                ]
+              },
+              {
+                "byte_number": 41,
+                "used_by_tables": [
+                  "tbl_recirc"
+                ]
+              },
+              {
+                "byte_number": 100,
+                "used_by_tables": [
+                  "tbl_recirc"
+                ]
+              },
+              {
+                "byte_number": 101,
+                "used_by_tables": [
+                  "tbl_recirc"
+                ]
+              },
+              {
+                "byte_number": 102,
+                "used_by_tables": [
+                  "tbl_recirc"
+                ]
+              },
+              {
+                "byte_number": 103,
+                "used_by_tables": [
+                  "tbl_recirc"
+                ]
+              },
+              {
+                "byte_number": 36,
+                "used_by_tables": [
+                  "tbl_get_rndnum"
+                ]
+              },
+              {
+                "byte_number": 37,
+                "used_by_tables": [
+                  "tbl_get_rndnum"
+                ]
+              }
+            ],
+            "size": 128
+          },
+          "xbar_bytes": {
+            "bytes": [
+              {
+                "byte_number": 1,
+                "usages": [
+                  {
+                    "used_by": "Ingress.forward_t",
+                    "used_for": "exact_match",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 8,
+                        "offset": 0,
+                        "field_name": "ingress::ig_intr_md.ingress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 0,
+                "usages": [
+                  {
+                    "used_by": "Ingress.forward_t",
+                    "used_for": "exact_match",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "ingress::ig_intr_md.ingress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 2,
+                "usages": [
+                  {
+                    "used_by": "cond-5",
+                    "used_for": "gateway",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 0,
+                        "offset": 0,
+                        "field_name": "ingress::hdr.timer.$valid"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 4,
+                "usages": [
+                  {
+                    "used_by": "cond-6",
+                    "used_for": "gateway",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 0,
+                        "offset": 5,
+                        "field_name": "ingress::hdr.timer.again"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 3,
+                "usages": [
+                  {
+                    "used_by": "cond-8",
+                    "used_for": "gateway",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 0,
+                        "offset": 0,
+                        "field_name": "egress::hdr.timer.$valid"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              }
+            ],
+            "exact_size": 128,
+            "ternary_size": 66,
+            "size": 194
+          },
+          "rams": {
+            "nColumns": 10,
+            "nRows": 8,
+            "srams": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Ingress.forward_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "way": 0,
+                "column": 0
+              }
+            ]
+          },
+          "meter_alus": {
+            "meters": [],
+            "nAlus": 4
+          },
+          "vliw": {
+            "size": 32,
+            "instructions": [
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "Ingress.forward_t",
+                        "action_names": [
+                          "NoAction"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "Ingress.forward_t",
+                        "action_names": [
+                          "Ingress.send"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_mod_header",
+                        "action_names": [
+                          "Egress.mod_header"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 0
+              },
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "Ingress.forward_t",
+                        "action_names": [
+                          "Ingress.drop"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_get_rndnum",
+                        "action_names": [
+                          "Ingress.get_rndnum"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_p_tqm486",
+                        "action_names": [
+                          "p_tqm486"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 1
+              },
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_recirc",
+                        "action_names": [
+                          "Ingress.recirc"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_set_p4_header",
+                        "action_names": [
+                          "Ingress.set_p4_header"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "ingress"
+                  }
+                ],
+                "instruction_number": 2
+              },
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_drop",
+                        "action_names": [
+                          "Ingress.drop"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "ingress"
+                  }
+                ],
+                "instruction_number": 3
+              }
+            ]
+          },
+          "gateways": {
+            "nUnits": 2,
+            "nRows": 8,
+            "gateways": [
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "cond-5",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              },
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "cond-6",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 1
+              },
+              {
+                "row": 1,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_rndnum-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "cond-8",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              }
+            ]
+          },
+          "stashes": {
+            "nUnits": 2,
+            "nRows": 8,
+            "stashes": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Ingress.forward_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "unit_id": 0
+              }
+            ]
+          },
+          "stage_number": 0,
+          "exm_search_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "cond-5",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "cond-6",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 1
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_rndnum-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 2
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "Ingress.forward_t",
+                    "used_for": "match_entry_ram"
+                  },
+                  {
+                    "used_by": "cond-8",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 14
+              }
+            ],
+            "size": 16
+          },
+          "exm_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_rndnum",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "Ingress.forward_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 14
+              }
+            ],
+            "size": 16
+          },
+          "hash_bits": {
+            "nBits": 52,
+            "bits": [
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 0
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 1
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 2
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 3
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 4
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 5
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 6
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 7
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 8
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Ingress.forward_t",
+                "used_for": "exact_match",
+                "hash_bit": 9
+              }
+            ],
+            "nFunctions": 8
+          },
+          "logical_tables": {
+            "ids": [
+              {
+                "id": 0,
+                "table_name": "Ingress.forward_t"
+              },
+              {
+                "id": 4,
+                "table_name": "tbl_recirc"
+              },
+              {
+                "id": 6,
+                "table_name": "tbl_drop"
+              },
+              {
+                "id": 1,
+                "table_name": "tbl_get_rndnum"
+              },
+              {
+                "id": 5,
+                "table_name": "tbl_set_p4_header"
+              },
+              {
+                "id": 2,
+                "table_name": "tbl_mod_header"
+              },
+              {
+                "id": 3,
+                "table_name": "tbl_p_tqm486"
+              }
+            ],
+            "size": 16
+          },
+          "statistic_alus": {
+            "stats": [],
+            "nAlus": 4
+          },
+          "action_slots": [
+            {
+              "slot_bit_width": 8,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 16,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 32,
+              "number_used": 0,
+              "maximum_slots": 32
+            }
+          ],
+          "hash_distribution_units": {
+            "units": [],
+            "nHashIds": 2,
+            "nUnitIds": 3
+          },
+          "tcams": {
+            "nColumns": 2,
+            "nRows": 12,
+            "tcams": []
+          },
+          "map_rams": {
+            "nUnits": 6,
+            "nRows": 8,
+            "maprams": []
+          }
+        },
+        {
+          "tind_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_weighted_qdepth",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 0
+              }
+            ],
+            "size": 16
+          },
+          "action_bus_bytes": {
+            "bytes": [
+              {
+                "byte_number": 36,
+                "used_by_tables": [
+                  "tbl_get_drop_prob",
+                  "tbl_set_drop_prob"
+                ]
+              },
+              {
+                "byte_number": 37,
+                "used_by_tables": [
+                  "tbl_get_drop_prob",
+                  "tbl_set_drop_prob"
+                ]
+              },
+              {
+                "byte_number": 32,
+                "used_by_tables": [
+                  "tbl_get_qdepth"
+                ]
+              },
+              {
+                "byte_number": 33,
+                "used_by_tables": [
+                  "tbl_get_qdepth"
+                ]
+              }
+            ],
+            "size": 128
+          },
+          "xbar_bytes": {
+            "bytes": [
+              {
+                "byte_number": 8,
+                "usages": [
+                  {
+                    "used_by": "Ingress.reg_drop_prob",
+                    "used_for": "stateful_alu",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "ingress::hdr.p4_header.drop_prob"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 9,
+                "usages": [
+                  {
+                    "used_by": "Ingress.reg_drop_prob",
+                    "used_for": "stateful_alu",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 15,
+                        "offset": 0,
+                        "field_name": "ingress::hdr.p4_header.drop_prob"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 6,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_drop_prob",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "ingress::hdr.p4_header.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 7,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_drop_prob",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 8,
+                        "offset": 0,
+                        "field_name": "ingress::hdr.p4_header.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 2,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "immediate lo",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "egress::hdr.p4_header.egress_port"
+                      }
+                    ]
+                  },
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "egress::hdr.p4_header.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 3,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "immediate lo",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 8,
+                        "offset": 0,
+                        "field_name": "egress::hdr.p4_header.egress_port"
+                      }
+                    ]
+                  },
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 8,
+                        "offset": 0,
+                        "field_name": "egress::hdr.p4_header.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              }
+            ],
+            "exact_size": 128,
+            "ternary_size": 66,
+            "size": 194
+          },
+          "rams": {
+            "nColumns": 10,
+            "nRows": 8,
+            "srams": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Ingress.reg_drop_prob",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "column": 4
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Ingress.reg_drop_prob",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "column": 5
+              }
+            ]
+          },
+          "meter_alus": {
+            "meters": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Ingress.reg_drop_prob",
+                    "used_for": "stateful_ram"
+                  }
+                ]
+              }
+            ],
+            "nAlus": 4
+          },
+          "vliw": {
+            "size": 32,
+            "instructions": [
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_set_drop_prob",
+                        "action_names": [
+                          "Ingress.set_drop_prob"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_get_drop_prob",
+                        "action_names": [
+                          "Ingress.get_drop_prob"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_get_qdepth",
+                        "action_names": [
+                          "Egress.get_qdepth"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 0
+              },
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_get_weighted_qdepth",
+                        "action_names": [
+                          "Egress.get_weighted_qdepth"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 1
+              }
+            ]
+          },
+          "gateways": {
+            "nUnits": 2,
+            "nRows": 8,
+            "gateways": [
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "tbl_set_drop_prob-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              },
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_drop_prob-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 1
+              },
+              {
+                "row": 1,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              }
+            ]
+          },
+          "stashes": {
+            "nUnits": 2,
+            "nRows": 8,
+            "stashes": []
+          },
+          "stage_number": 1,
+          "exm_search_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_set_drop_prob-gateway",
+                    "used_for": "gateway"
+                  },
+                  {
+                    "used_by": "tbl_get_drop_prob-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 2
+              }
+            ],
+            "size": 16
+          },
+          "exm_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_set_drop_prob",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_drop_prob",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 1
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 2
+              }
+            ],
+            "size": 16
+          },
+          "hash_bits": {
+            "nBits": 52,
+            "bits": [
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 32
+              },
+              {
+                "usages": [
+                  {
+                    "value": 1,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 33
+              },
+              {
+                "usages": [
+                  {
+                    "value": 2,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 34
+              },
+              {
+                "usages": [
+                  {
+                    "value": 3,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 35
+              },
+              {
+                "usages": [
+                  {
+                    "value": 4,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 36
+              },
+              {
+                "usages": [
+                  {
+                    "value": 5,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 37
+              },
+              {
+                "usages": [
+                  {
+                    "value": 6,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 38
+              },
+              {
+                "usages": [
+                  {
+                    "value": 7,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 39
+              },
+              {
+                "usages": [
+                  {
+                    "value": 8,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_drop_prob",
+                "used_for": "meter address",
+                "hash_bit": 40
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 0
+              },
+              {
+                "usages": [
+                  {
+                    "value": 1,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 1
+              },
+              {
+                "usages": [
+                  {
+                    "value": 2,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 2
+              },
+              {
+                "usages": [
+                  {
+                    "value": 3,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 3
+              },
+              {
+                "usages": [
+                  {
+                    "value": 4,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 4
+              },
+              {
+                "usages": [
+                  {
+                    "value": 5,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 5
+              },
+              {
+                "usages": [
+                  {
+                    "value": 6,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 6
+              },
+              {
+                "usages": [
+                  {
+                    "value": 7,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 7
+              },
+              {
+                "usages": [
+                  {
+                    "value": 8,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "immediate lo",
+                "hash_bit": 8
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 16
+              },
+              {
+                "usages": [
+                  {
+                    "value": 1,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 17
+              },
+              {
+                "usages": [
+                  {
+                    "value": 2,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 18
+              },
+              {
+                "usages": [
+                  {
+                    "value": 3,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 19
+              },
+              {
+                "usages": [
+                  {
+                    "value": 4,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 20
+              },
+              {
+                "usages": [
+                  {
+                    "value": 5,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 21
+              },
+              {
+                "usages": [
+                  {
+                    "value": 6,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 22
+              },
+              {
+                "usages": [
+                  {
+                    "value": 7,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 23
+              },
+              {
+                "usages": [
+                  {
+                    "value": 8,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 24
+              }
+            ],
+            "nFunctions": 8
+          },
+          "logical_tables": {
+            "ids": [
+              {
+                "id": 2,
+                "table_name": "tbl_set_drop_prob"
+              },
+              {
+                "id": 1,
+                "table_name": "tbl_get_drop_prob"
+              },
+              {
+                "id": 3,
+                "table_name": "tbl_get_weighted_qdepth"
+              },
+              {
+                "id": 0,
+                "table_name": "tbl_get_qdepth"
+              }
+            ],
+            "size": 16
+          },
+          "statistic_alus": {
+            "stats": [],
+            "nAlus": 4
+          },
+          "action_slots": [
+            {
+              "slot_bit_width": 8,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 16,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 32,
+              "number_used": 0,
+              "maximum_slots": 32
+            }
+          ],
+          "hash_distribution_units": {
+            "units": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_drop_prob",
+                    "used_for": "meter address"
+                  },
+                  {
+                    "used_by": "tbl_set_drop_prob",
+                    "used_for": "meter address"
+                  }
+                ],
+                "hash_id": 0,
+                "unit_id": 2
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "immediate lo"
+                  }
+                ],
+                "hash_id": 0,
+                "unit_id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "meter address"
+                  }
+                ],
+                "hash_id": 0,
+                "unit_id": 1
+              }
+            ],
+            "nHashIds": 2,
+            "nUnitIds": 3
+          },
+          "tcams": {
+            "nColumns": 2,
+            "nRows": 12,
+            "tcams": []
+          },
+          "map_rams": {
+            "nUnits": 6,
+            "nRows": 8,
+            "maprams": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Ingress.reg_drop_prob",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "unit_id": 0
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Ingress.reg_drop_prob",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "unit_id": 1
+              }
+            ]
+          }
+        },
+        {
+          "tind_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_diff",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 0
+              }
+            ],
+            "size": 16
+          },
+          "action_bus_bytes": {
+            "bytes": [
+              {
+                "byte_number": 32,
+                "used_by_tables": [
+                  "tbl_get_qdepth",
+                  "tbl_set_qdepth"
+                ]
+              },
+              {
+                "byte_number": 33,
+                "used_by_tables": [
+                  "tbl_get_qdepth",
+                  "tbl_set_qdepth"
+                ]
+              }
+            ],
+            "size": 128
+          },
+          "xbar_bytes": {
+            "bytes": [
+              {
+                "byte_number": 8,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_alu",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "egress::meta.weighted_qdepth"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 9,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_alu",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 15,
+                        "offset": 0,
+                        "field_name": "egress::meta.weighted_qdepth"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 10,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_alu",
+                    "slices": [
+                      {
+                        "lsb": 16,
+                        "msb": 23,
+                        "offset": 0,
+                        "field_name": "egress::meta.weighted_qdepth"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 11,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_alu",
+                    "slices": [
+                      {
+                        "lsb": 24,
+                        "msb": 31,
+                        "offset": 0,
+                        "field_name": "egress::meta.weighted_qdepth"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 0,
+                "usages": [
+                  {
+                    "used_by": "tbl_set_qdepth",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "egress::eg_intr_md.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 1,
+                "usages": [
+                  {
+                    "used_by": "tbl_set_qdepth",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 8,
+                        "offset": 0,
+                        "field_name": "egress::eg_intr_md.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 2,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "Egress.reg_qdepth$index"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 3,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "meter address",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 9,
+                        "offset": 0,
+                        "field_name": "Egress.reg_qdepth$index"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              }
+            ],
+            "exact_size": 128,
+            "ternary_size": 66,
+            "size": 194
+          },
+          "rams": {
+            "nColumns": 10,
+            "nRows": 8,
+            "srams": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "column": 4
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "column": 5
+              }
+            ]
+          },
+          "meter_alus": {
+            "meters": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_ram"
+                  }
+                ]
+              }
+            ],
+            "nAlus": 4
+          },
+          "vliw": {
+            "size": 32,
+            "instructions": [
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_get_diff",
+                        "action_names": [
+                          "Ingress.get_diff"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_set_qdepth",
+                        "action_names": [
+                          "Egress.set_qdepth"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "egress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_get_qdepth",
+                        "action_names": [
+                          "Egress.get_qdepth"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 0
+              }
+            ]
+          },
+          "gateways": {
+            "nUnits": 2,
+            "nRows": 8,
+            "gateways": [
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "tbl_set_qdepth-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 1
+              },
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              }
+            ]
+          },
+          "stashes": {
+            "nUnits": 2,
+            "nRows": 8,
+            "stashes": []
+          },
+          "stage_number": 2,
+          "exm_search_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_set_qdepth-gateway",
+                    "used_for": "gateway"
+                  },
+                  {
+                    "used_by": "tbl_get_qdepth-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 0
+              }
+            ],
+            "size": 16
+          },
+          "exm_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_set_qdepth",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 1
+              }
+            ],
+            "size": 16
+          },
+          "hash_bits": {
+            "nBits": 52,
+            "bits": [
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 0
+              },
+              {
+                "usages": [
+                  {
+                    "value": 1,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 1
+              },
+              {
+                "usages": [
+                  {
+                    "value": 2,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 2
+              },
+              {
+                "usages": [
+                  {
+                    "value": 3,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 3
+              },
+              {
+                "usages": [
+                  {
+                    "value": 4,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 4
+              },
+              {
+                "usages": [
+                  {
+                    "value": 5,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 5
+              },
+              {
+                "usages": [
+                  {
+                    "value": 6,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 6
+              },
+              {
+                "usages": [
+                  {
+                    "value": 7,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 7
+              },
+              {
+                "usages": [
+                  {
+                    "value": 8,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_set_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 8
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 16
+              },
+              {
+                "usages": [
+                  {
+                    "value": 1,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 17
+              },
+              {
+                "usages": [
+                  {
+                    "value": 2,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 18
+              },
+              {
+                "usages": [
+                  {
+                    "value": 3,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 19
+              },
+              {
+                "usages": [
+                  {
+                    "value": 4,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 20
+              },
+              {
+                "usages": [
+                  {
+                    "value": 5,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 21
+              },
+              {
+                "usages": [
+                  {
+                    "value": 6,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 22
+              },
+              {
+                "usages": [
+                  {
+                    "value": 7,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 23
+              },
+              {
+                "usages": [
+                  {
+                    "value": 8,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 24
+              },
+              {
+                "usages": [
+                  {
+                    "value": 9,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "tbl_get_qdepth",
+                "used_for": "meter address",
+                "hash_bit": 25
+              }
+            ],
+            "nFunctions": 8
+          },
+          "logical_tables": {
+            "ids": [
+              {
+                "id": 0,
+                "table_name": "tbl_get_diff"
+              },
+              {
+                "id": 1,
+                "table_name": "tbl_set_qdepth"
+              },
+              {
+                "id": 2,
+                "table_name": "tbl_get_qdepth"
+              }
+            ],
+            "size": 16
+          },
+          "statistic_alus": {
+            "stats": [],
+            "nAlus": 4
+          },
+          "action_slots": [
+            {
+              "slot_bit_width": 8,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 16,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 32,
+              "number_used": 0,
+              "maximum_slots": 32
+            }
+          ],
+          "hash_distribution_units": {
+            "units": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_set_qdepth",
+                    "used_for": "meter address"
+                  }
+                ],
+                "hash_id": 0,
+                "unit_id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_get_qdepth",
+                    "used_for": "meter address"
+                  }
+                ],
+                "hash_id": 0,
+                "unit_id": 1
+              }
+            ],
+            "nHashIds": 2,
+            "nUnitIds": 3
+          },
+          "tcams": {
+            "nColumns": 2,
+            "nRows": 12,
+            "tcams": []
+          },
+          "map_rams": {
+            "nUnits": 6,
+            "nRows": 8,
+            "maprams": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "unit_id": 0
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.reg_qdepth",
+                    "used_for": "stateful_ram"
+                  }
+                ],
+                "unit_id": 1
+              }
+            ]
+          }
+        },
+        {
+          "tind_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_mag_qdepth",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "tbl_drop_0",
+                    "used_for": "ternary_indirection_ram"
+                  }
+                ],
+                "id": 1
+              }
+            ],
+            "size": 16
+          },
+          "action_bus_bytes": {
+            "bytes": [],
+            "size": 128
+          },
+          "xbar_bytes": {
+            "bytes": [
+              {
+                "byte_number": 1,
+                "usages": [
+                  {
+                    "used_by": "cond-7",
+                    "used_for": "gateway",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 15,
+                        "offset": 0,
+                        "field_name": "ingress::meta.diff"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 0,
+                "usages": [
+                  {
+                    "used_by": "cond-7",
+                    "used_for": "gateway",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "ingress::meta.diff"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              }
+            ],
+            "exact_size": 128,
+            "ternary_size": 66,
+            "size": 194
+          },
+          "rams": {
+            "nColumns": 10,
+            "nRows": 8,
+            "srams": []
+          },
+          "meter_alus": {
+            "meters": [],
+            "nAlus": 4
+          },
+          "vliw": {
+            "size": 32,
+            "instructions": [
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_drop_0",
+                        "action_names": [
+                          "Ingress.drop"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "ingress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "tbl_mag_qdepth",
+                        "action_names": [
+                          "Egress.mag_qdepth"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 0
+              }
+            ]
+          },
+          "gateways": {
+            "nUnits": 2,
+            "nRows": 8,
+            "gateways": [
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "cond-7",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              }
+            ]
+          },
+          "stashes": {
+            "nUnits": 2,
+            "nRows": 8,
+            "stashes": []
+          },
+          "stage_number": 3,
+          "exm_search_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "cond-7",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 0
+              }
+            ],
+            "size": 16
+          },
+          "exm_result_buses": {
+            "ids": [],
+            "size": 16
+          },
+          "hash_bits": {
+            "nBits": 52,
+            "bits": [],
+            "nFunctions": 8
+          },
+          "logical_tables": {
+            "ids": [
+              {
+                "id": 1,
+                "table_name": "tbl_drop_0"
+              },
+              {
+                "id": 0,
+                "table_name": "tbl_mag_qdepth"
+              }
+            ],
+            "size": 16
+          },
+          "statistic_alus": {
+            "stats": [],
+            "nAlus": 4
+          },
+          "action_slots": [
+            {
+              "slot_bit_width": 8,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 16,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 32,
+              "number_used": 0,
+              "maximum_slots": 32
+            }
+          ],
+          "hash_distribution_units": {
+            "units": [],
+            "nHashIds": 2,
+            "nUnitIds": 3
+          },
+          "tcams": {
+            "nColumns": 2,
+            "nRows": 12,
+            "tcams": []
+          },
+          "map_rams": {
+            "nUnits": 6,
+            "nRows": 8,
+            "maprams": []
+          }
+        },
+        {
+          "tind_result_buses": {
+            "ids": [],
+            "size": 16
+          },
+          "action_bus_bytes": {
+            "bytes": [
+              {
+                "byte_number": 96,
+                "used_by_tables": [
+                  "Egress.map_qdepth_to_prob_t"
+                ]
+              },
+              {
+                "byte_number": 97,
+                "used_by_tables": [
+                  "Egress.map_qdepth_to_prob_t"
+                ]
+              },
+              {
+                "byte_number": 98,
+                "used_by_tables": [
+                  "Egress.map_qdepth_to_prob_t"
+                ]
+              },
+              {
+                "byte_number": 99,
+                "used_by_tables": [
+                  "Egress.map_qdepth_to_prob_t"
+                ]
+              },
+              {
+                "byte_number": 100,
+                "used_by_tables": [
+                  "Egress.mod_dst_mac_t"
+                ]
+              },
+              {
+                "byte_number": 101,
+                "used_by_tables": [
+                  "Egress.mod_dst_mac_t"
+                ]
+              },
+              {
+                "byte_number": 102,
+                "used_by_tables": [
+                  "Egress.mod_dst_mac_t"
+                ]
+              },
+              {
+                "byte_number": 103,
+                "used_by_tables": [
+                  "Egress.mod_dst_mac_t"
+                ]
+              },
+              {
+                "byte_number": 0,
+                "used_by_tables": [
+                  "Egress.mod_dst_mac_t"
+                ]
+              },
+              {
+                "byte_number": 1,
+                "used_by_tables": [
+                  "Egress.mod_dst_mac_t"
+                ]
+              }
+            ],
+            "size": 128
+          },
+          "xbar_bytes": {
+            "bytes": [
+              {
+                "byte_number": 0,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t",
+                    "used_for": "action data address",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "egress::meta.depth"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 1,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t",
+                    "used_for": "action data address",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 15,
+                        "offset": 0,
+                        "field_name": "egress::meta.depth"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 9,
+                "usages": [
+                  {
+                    "used_by": "Egress.mod_dst_mac_t",
+                    "used_for": "exact_match",
+                    "slices": [
+                      {
+                        "lsb": 8,
+                        "msb": 8,
+                        "offset": 0,
+                        "field_name": "egress::eg_intr_md.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              },
+              {
+                "byte_number": 8,
+                "usages": [
+                  {
+                    "used_by": "Egress.mod_dst_mac_t",
+                    "used_for": "exact_match",
+                    "slices": [
+                      {
+                        "lsb": 0,
+                        "msb": 7,
+                        "offset": 0,
+                        "field_name": "egress::eg_intr_md.egress_port"
+                      }
+                    ]
+                  }
+                ],
+                "byte_type": "exact"
+              }
+            ],
+            "exact_size": 128,
+            "ternary_size": 66,
+            "size": 194
+          },
+          "rams": {
+            "nColumns": 10,
+            "nRows": 8,
+            "srams": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 4
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 5
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 6
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 7
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 8
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 9
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 2
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 3
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 4
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 5
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 6
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 7
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 8
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 9
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 0
+              },
+              {
+                "row": 6,
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 1
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.mod_dst_mac_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "way": 0,
+                "column": 0
+              },
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.mod_dst_mac_t$action",
+                    "used_for": "action_ram"
+                  }
+                ],
+                "column": 1
+              }
+            ]
+          },
+          "meter_alus": {
+            "meters": [],
+            "nAlus": 4
+          },
+          "vliw": {
+            "size": 32,
+            "instructions": [
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "Egress.map_qdepth_to_prob_t",
+                        "action_names": [
+                          "Egress.map_qdepth_to_prob"
+                        ]
+                      }
+                    ],
+                    "color": 1,
+                    "gress": "egress"
+                  },
+                  {
+                    "usages": [
+                      {
+                        "used_by": "Egress.mod_dst_mac_t",
+                        "action_names": [
+                          "NoAction"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 0
+              },
+              {
+                "color_usages": [
+                  {
+                    "usages": [
+                      {
+                        "used_by": "Egress.mod_dst_mac_t",
+                        "action_names": [
+                          "Egress.mod_dst_mac"
+                        ]
+                      }
+                    ],
+                    "color": 0,
+                    "gress": "egress"
+                  }
+                ],
+                "instruction_number": 1
+              }
+            ]
+          },
+          "gateways": {
+            "nUnits": 2,
+            "nRows": 8,
+            "gateways": [
+              {
+                "row": 0,
+                "usages": [
+                  {
+                    "used_by": "map_qdepth_to_prob_t_0-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "unit_id": 0
+              }
+            ]
+          },
+          "stashes": {
+            "nUnits": 2,
+            "nRows": 8,
+            "stashes": [
+              {
+                "row": 7,
+                "usages": [
+                  {
+                    "used_by": "Egress.mod_dst_mac_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "unit_id": 0
+              }
+            ]
+          },
+          "stage_number": 4,
+          "exm_search_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "map_qdepth_to_prob_t_0-gateway",
+                    "used_for": "gateway"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "Egress.mod_dst_mac_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 14
+              }
+            ],
+            "size": 16
+          },
+          "exm_result_buses": {
+            "ids": [
+              {
+                "usages": [
+                  {
+                    "used_by": "Egress.map_qdepth_to_prob_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 0
+              },
+              {
+                "usages": [
+                  {
+                    "used_by": "Egress.mod_dst_mac_t",
+                    "used_for": "match_entry_ram"
+                  }
+                ],
+                "id": 14
+              }
+            ],
+            "size": 16
+          },
+          "hash_bits": {
+            "nBits": 52,
+            "bits": [
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 0
+              },
+              {
+                "usages": [
+                  {
+                    "value": 1,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 1
+              },
+              {
+                "usages": [
+                  {
+                    "value": 2,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 2
+              },
+              {
+                "usages": [
+                  {
+                    "value": 3,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 3
+              },
+              {
+                "usages": [
+                  {
+                    "value": 4,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 4
+              },
+              {
+                "usages": [
+                  {
+                    "value": 5,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 5
+              },
+              {
+                "usages": [
+                  {
+                    "value": 6,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 6
+              },
+              {
+                "usages": [
+                  {
+                    "value": 7,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 7
+              },
+              {
+                "usages": [
+                  {
+                    "value": 8,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 8
+              },
+              {
+                "usages": [
+                  {
+                    "value": 9,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 9
+              },
+              {
+                "usages": [
+                  {
+                    "value": 10,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 10
+              },
+              {
+                "usages": [
+                  {
+                    "value": 11,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 11
+              },
+              {
+                "usages": [
+                  {
+                    "value": 12,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 12
+              },
+              {
+                "usages": [
+                  {
+                    "value": 13,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 13
+              },
+              {
+                "usages": [
+                  {
+                    "value": 14,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 14
+              },
+              {
+                "usages": [
+                  {
+                    "value": 15,
+                    "type": "dist_bit"
+                  }
+                ],
+                "hash_function": 0,
+                "used_by_table": "Egress.map_qdepth_to_prob_t",
+                "used_for": "action data address",
+                "hash_bit": 15
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 0
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 1
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 2
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 3
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 4
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 5
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 6
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 7
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 8
+              },
+              {
+                "usages": [
+                  {
+                    "value": 0,
+                    "type": "way_line_select"
+                  }
+                ],
+                "hash_function": 1,
+                "used_by_table": "Egress.mod_dst_mac_t",
+                "used_for": "exact_match",
+                "hash_bit": 9
+              }
+            ],
+            "nFunctions": 8
+          },
+          "logical_tables": {
+            "ids": [
+              {
+                "id": 0,
+                "table_name": "Egress.map_qdepth_to_prob_t"
+              },
+              {
+                "id": 1,
+                "table_name": "Egress.mod_dst_mac_t"
+              }
+            ],
+            "size": 16
+          },
+          "statistic_alus": {
+            "stats": [],
+            "nAlus": 4
+          },
+          "action_slots": [
+            {
+              "slot_bit_width": 8,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 16,
+              "number_used": 0,
+              "maximum_slots": 32
+            },
+            {
+              "slot_bit_width": 32,
+              "number_used": 0,
+              "maximum_slots": 32
+            }
+          ],
+          "hash_distribution_units": {
+            "units": [
+              {
+                "usages": [
+                  {
+                    "used_by": "map_qdepth_to_prob_t_0",
+                    "used_for": "action data address"
+                  }
+                ],
+                "hash_id": 0,
+                "unit_id": 0
+              }
+            ],
+            "nHashIds": 2,
+            "nUnitIds": 3
+          },
+          "tcams": {
+            "nColumns": 2,
+            "nRows": 12,
+            "tcams": []
+          },
+          "map_rams": {
+            "nUnits": 6,
+            "nRows": 8,
+            "maprams": []
+          }
+        }
+      ]
+    },
+    "deparser": [
+      {
+        "learning_table": {
+          "table_phv": [],
+          "nTables": 0,
+          "maxBytes": 0
+        },
+        "fde_entries": [
+          {
+            "pov_name": "hdr.timer.$valid",
+            "pov_bit": 0,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 65
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 292
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 0
+          },
+          {
+            "pov_name": "hdr.timer.$valid",
+            "pov_bit": 0,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 1
+              }
+            ],
+            "entry": 1
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 334
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 334
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 295
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 294
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 2
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 293
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 292
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 333
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 333
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 3
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 331
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 331
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 330
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 330
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 4
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 332
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 332
+                },
+                "chunk_number": 1
+              }
+            ],
+            "entry": 5
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 260
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 6
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 262
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 262
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 262
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 262
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 7
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 261
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 261
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 261
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 261
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 8
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 265
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 265
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 265
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 265
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 9
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 264
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 264
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 264
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 264
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 10
+          },
+          {
+            "pov_name": "hdr.udp.$valid",
+            "pov_bit": 4,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 327
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 327
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 326
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 326
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 11
+          },
+          {
+            "pov_name": "hdr.udp.$valid",
+            "pov_bit": 4,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 263
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 263
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 263
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 263
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 12
+          },
+          {
+            "pov_name": "hdr.p4_header.$valid",
+            "pov_bit": 1,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 1
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 1
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 1
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 1
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 13
+          },
+          {
+            "pov_name": "hdr.p4_header.$valid",
+            "pov_bit": 1,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 329
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 329
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 328
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 328
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 14
+          }
+        ],
+        "gress": "ingress",
+        "nFdeEntries": 192,
+        "resubmit_table": {
+          "table_phv": [],
+          "nTables": 0,
+          "maxBytes": 0
+        },
+        "pov": {
+          "pov_bits": [
+            {
+              "phv_container_bit": 0,
+              "phv_container": 66,
+              "pov_name": "hdr.timer.$valid",
+              "pov_bit": 0
+            },
+            {
+              "phv_container_bit": 1,
+              "phv_container": 66,
+              "pov_name": "hdr.p4_header.$valid",
+              "pov_bit": 1
+            },
+            {
+              "phv_container_bit": 2,
+              "phv_container": 66,
+              "pov_name": "hdr.ethernet.$valid",
+              "pov_bit": 2
+            },
+            {
+              "phv_container_bit": 3,
+              "phv_container": 66,
+              "pov_name": "hdr.ipv4.$valid",
+              "pov_bit": 3
+            },
+            {
+              "phv_container_bit": 4,
+              "phv_container": 66,
+              "pov_name": "hdr.udp.$valid",
+              "pov_bit": 4
+            }
+          ],
+          "size": 5
+        },
+        "mirror_table": {
+          "table_phv": [],
+          "nTables": 0,
+          "maxBytes": 0
+        }
+      },
+      {
+        "learning_table": {
+          "table_phv": [],
+          "nTables": 0,
+          "maxBytes": 0
+        },
+        "fde_entries": [
+          {
+            "pov_name": "hdr.timer.$valid",
+            "pov_bit": 0,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 80
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 288
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 0
+          },
+          {
+            "pov_name": "hdr.timer.$valid",
+            "pov_bit": 0,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 1
+              }
+            ],
+            "entry": 1
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 81
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 80
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 22
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 22
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 2
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 22
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 22
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 339
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 339
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 3
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 324
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 324
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 323
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 323
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 4
+          },
+          {
+            "pov_name": "hdr.ethernet.$valid",
+            "pov_bit": 2,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 338
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 338
+                },
+                "chunk_number": 1
+              }
+            ],
+            "entry": 5
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 256
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 6
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 258
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 258
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 258
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 258
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 7
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 257
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 257
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 257
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 257
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 8
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 268
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 268
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 268
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 268
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 9
+          },
+          {
+            "pov_name": "hdr.ipv4.$valid",
+            "pov_bit": 3,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 289
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 288
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 325
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 325
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 10
+          },
+          {
+            "pov_name": "hdr.udp.$valid",
+            "pov_bit": 4,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 322
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 322
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 321
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 321
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 11
+          },
+          {
+            "pov_name": "hdr.udp.$valid",
+            "pov_bit": 4,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 259
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 259
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 259
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 259
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 12
+          },
+          {
+            "pov_name": "hdr.p4_header.$valid",
+            "pov_bit": 1,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 17
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 17
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 17
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 17
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 13
+          },
+          {
+            "pov_name": "hdr.p4_header.$valid",
+            "pov_bit": 1,
+            "chunks": [
+              {
+                "chunk": {
+                  "phv_container": 19
+                },
+                "chunk_number": 0
+              },
+              {
+                "chunk": {
+                  "phv_container": 19
+                },
+                "chunk_number": 1
+              },
+              {
+                "chunk": {
+                  "phv_container": 19
+                },
+                "chunk_number": 2
+              },
+              {
+                "chunk": {
+                  "phv_container": 19
+                },
+                "chunk_number": 3
+              }
+            ],
+            "entry": 14
+          }
+        ],
+        "gress": "egress",
+        "nFdeEntries": 192,
+        "resubmit_table": {
+          "table_phv": [],
+          "nTables": 0,
+          "maxBytes": 0
+        },
+        "pov": {
+          "pov_bits": [
+            {
+              "phv_container_bit": 0,
+              "phv_container": 82,
+              "pov_name": "hdr.timer.$valid",
+              "pov_bit": 0
+            },
+            {
+              "phv_container_bit": 1,
+              "phv_container": 82,
+              "pov_name": "hdr.p4_header.$valid",
+              "pov_bit": 1
+            },
+            {
+              "phv_container_bit": 2,
+              "phv_container": 82,
+              "pov_name": "hdr.ethernet.$valid",
+              "pov_bit": 2
+            },
+            {
+              "phv_container_bit": 3,
+              "phv_container": 82,
+              "pov_name": "hdr.ipv4.$valid",
+              "pov_bit": 3
+            },
+            {
+              "phv_container_bit": 4,
+              "phv_container": 82,
+              "pov_name": "hdr.udp.$valid",
+              "pov_bit": 4
+            }
+          ],
+          "size": 5
+        },
+        "mirror_table": {
+          "table_phv": [],
+          "nTables": 0,
+          "maxBytes": 0
+        }
+      }
+    ],
+    "parser": {
+      "nParsers": 18,
+      "parsers": [
+        {
+          "parser_id": 0,
+          "gress": "egress",
+          "states": [
+            {
+              "tcam_row": 255,
+              "previous_state_name": "$entry_point",
+              "matchesOn": [],
+              "previous_state_id": 1,
+              "shifts": 0,
+              "next_state_name": "start",
+              "next_state_id": 0,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 56,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 16
+                },
+                {
+                  "buffer_offset": 54,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 320
+                }
+              ],
+              "savesTo": [
+                {
+                  "buffer_offset": 0,
+                  "hardware_id": 0
+                }
+              ]
+            },
+            {
+              "tcam_row": 254,
+              "previous_state_name": "start",
+              "matchesOn": [
+                {
+                  "value": "0b*******001000100",
+                  "bit_width": 16,
+                  "hardware_id": 0
+                }
+              ],
+              "previous_state_id": 0,
+              "shifts": 27,
+              "next_state_name": "parse_timer",
+              "next_state_id": 2,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 145
+                },
+                {
+                  "buffer_offset": 1,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 18
+                }
+              ]
+            },
+            {
+              "tcam_row": 253,
+              "previous_state_name": "start",
+              "matchesOn": [
+                {
+                  "value": "0x****",
+                  "bit_width": 16,
+                  "hardware_id": 0
+                }
+              ],
+              "previous_state_id": 0,
+              "shifts": 27,
+              "next_state_name": "parse_ethernet",
+              "next_state_id": 3,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 145
+                },
+                {
+                  "buffer_offset": 1,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 18
+                }
+              ]
+            },
+            {
+              "tcam_row": 252,
+              "previous_state_name": "parse_timer",
+              "matchesOn": [],
+              "previous_state_id": 2,
+              "shifts": 6,
+              "next_state_name": "parse_p4_header",
+              "next_state_id": 4,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 80
+                },
+                {
+                  "buffer_offset": 1,
+                  "extractor_id": 1,
+                  "bit_width": 8,
+                  "dest_container": 288
+                },
+                {
+                  "buffer_offset": 2,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 256
+                },
+                {
+                  "constant_value": 1,
+                  "extractor_id": 2,
+                  "bit_width": 8,
+                  "dest_container": 82
+                }
+              ]
+            },
+            {
+              "tcam_row": 251,
+              "previous_state_name": "parse_p4_header",
+              "matchesOn": [],
+              "previous_state_id": 4,
+              "shifts": 12,
+              "next_state_name": "END",
+              "next_state_id": 5,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 17
+                },
+                {
+                  "buffer_offset": 4,
+                  "extractor_id": 1,
+                  "bit_width": 32,
+                  "dest_container": 19
+                },
+                {
+                  "buffer_offset": 8,
+                  "extractor_id": 2,
+                  "bit_width": 32,
+                  "dest_container": 21
+                },
+                {
+                  "constant_value": 2,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 82
+                }
+              ]
+            },
+            {
+              "tcam_row": 250,
+              "previous_state_name": "parse_ethernet",
+              "matchesOn": [],
+              "previous_state_id": 3,
+              "shifts": 26,
+              "next_state_name": "parse_ethernet.$split_0",
+              "next_state_id": 6,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 81
+                },
+                {
+                  "buffer_offset": 1,
+                  "extractor_id": 1,
+                  "bit_width": 8,
+                  "dest_container": 80
+                },
+                {
+                  "buffer_offset": 2,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 22
+                },
+                {
+                  "buffer_offset": 6,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 339
+                },
+                {
+                  "buffer_offset": 8,
+                  "extractor_id": 1,
+                  "bit_width": 16,
+                  "dest_container": 324
+                },
+                {
+                  "buffer_offset": 10,
+                  "extractor_id": 2,
+                  "bit_width": 16,
+                  "dest_container": 323
+                },
+                {
+                  "buffer_offset": 12,
+                  "extractor_id": 3,
+                  "bit_width": 16,
+                  "dest_container": 338
+                },
+                {
+                  "buffer_offset": 14,
+                  "extractor_id": 1,
+                  "bit_width": 32,
+                  "dest_container": 256
+                },
+                {
+                  "buffer_offset": 18,
+                  "extractor_id": 2,
+                  "bit_width": 32,
+                  "dest_container": 258
+                },
+                {
+                  "buffer_offset": 22,
+                  "extractor_id": 3,
+                  "bit_width": 32,
+                  "dest_container": 257
+                },
+                {
+                  "buffer_offset": 30,
+                  "extractor_id": 2,
+                  "bit_width": 8,
+                  "dest_container": 289
+                },
+                {
+                  "buffer_offset": 31,
+                  "extractor_id": 3,
+                  "bit_width": 8,
+                  "dest_container": 288
+                }
+              ],
+              "savesTo": [
+                {
+                  "buffer_offset": 23,
+                  "hardware_id": 2
+                }
+              ]
+            },
+            {
+              "tcam_row": 249,
+              "previous_state_name": "parse_ethernet.$split_0",
+              "matchesOn": [
+                {
+                  "value": "0x11",
+                  "bit_width": 8,
+                  "hardware_id": 2
+                }
+              ],
+              "previous_state_id": 6,
+              "shifts": 8,
+              "next_state_name": "parse_udp",
+              "next_state_id": 7,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 268
+                },
+                {
+                  "buffer_offset": 6,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 325
+                },
+                {
+                  "constant_value": 12,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 82
+                }
+              ]
+            },
+            {
+              "tcam_row": 248,
+              "previous_state_name": "parse_ethernet.$split_0",
+              "matchesOn": [
+                {
+                  "value": "0x**",
+                  "bit_width": 8,
+                  "hardware_id": 2
+                }
+              ],
+              "previous_state_id": 6,
+              "shifts": 8,
+              "next_state_name": "END",
+              "next_state_id": 5,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 268
+                },
+                {
+                  "buffer_offset": 6,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 325
+                },
+                {
+                  "constant_value": 12,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 82
+                }
+              ]
+            },
+            {
+              "tcam_row": 247,
+              "previous_state_name": "parse_udp",
+              "matchesOn": [],
+              "previous_state_id": 7,
+              "shifts": 8,
+              "next_state_name": "parse_p4_header",
+              "next_state_id": 4,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 322
+                },
+                {
+                  "buffer_offset": 2,
+                  "extractor_id": 1,
+                  "bit_width": 16,
+                  "dest_container": 321
+                },
+                {
+                  "buffer_offset": 4,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 259
+                },
+                {
+                  "constant_value": 16,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 82
+                }
+              ]
+            }
+          ],
+          "nStates": 256
+        },
+        {
+          "phase0": {
+            "used_by": "IngressParser.$PORT_METADATA",
+            "used_for": "set_port_metadata"
+          },
+          "parser_id": 0,
+          "gress": "ingress",
+          "states": [
+            {
+              "tcam_row": 255,
+              "previous_state_name": "$entry_point",
+              "matchesOn": [],
+              "previous_state_id": 1,
+              "shifts": 0,
+              "next_state_name": "start",
+              "next_state_id": 0,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 56,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 0
+                },
+                {
+                  "buffer_offset": 54,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 335
+                }
+              ],
+              "savesTo": [
+                {
+                  "buffer_offset": 0,
+                  "hardware_id": 0
+                }
+              ]
+            },
+            {
+              "tcam_row": 254,
+              "previous_state_name": "start",
+              "matchesOn": [
+                {
+                  "value": "0b*******001000100",
+                  "bit_width": 16,
+                  "hardware_id": 0
+                }
+              ],
+              "previous_state_id": 0,
+              "shifts": 16,
+              "next_state_name": "parse_timer",
+              "next_state_id": 2,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 132
+                }
+              ]
+            },
+            {
+              "tcam_row": 253,
+              "previous_state_name": "start",
+              "matchesOn": [
+                {
+                  "value": "0x****",
+                  "bit_width": 16,
+                  "hardware_id": 0
+                }
+              ],
+              "previous_state_id": 0,
+              "shifts": 16,
+              "next_state_name": "parse_ethernet",
+              "next_state_id": 3,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 132
+                }
+              ]
+            },
+            {
+              "tcam_row": 252,
+              "previous_state_name": "parse_timer",
+              "matchesOn": [],
+              "previous_state_id": 2,
+              "shifts": 6,
+              "next_state_name": "parse_p4_header",
+              "next_state_id": 4,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 65
+                },
+                {
+                  "buffer_offset": 1,
+                  "extractor_id": 1,
+                  "bit_width": 8,
+                  "dest_container": 292
+                },
+                {
+                  "buffer_offset": 2,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 260
+                },
+                {
+                  "constant_value": 1,
+                  "extractor_id": 2,
+                  "bit_width": 8,
+                  "dest_container": 66
+                }
+              ]
+            },
+            {
+              "tcam_row": 251,
+              "previous_state_name": "parse_p4_header",
+              "matchesOn": [],
+              "previous_state_id": 4,
+              "shifts": 12,
+              "next_state_name": "END",
+              "next_state_id": 5,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 1
+                },
+                {
+                  "buffer_offset": 4,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 329
+                },
+                {
+                  "buffer_offset": 6,
+                  "extractor_id": 1,
+                  "bit_width": 16,
+                  "dest_container": 328
+                },
+                {
+                  "buffer_offset": 8,
+                  "extractor_id": 1,
+                  "bit_width": 32,
+                  "dest_container": 2
+                },
+                {
+                  "constant_value": 2,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 66
+                }
+              ]
+            },
+            {
+              "tcam_row": 250,
+              "previous_state_name": "parse_ethernet",
+              "matchesOn": [],
+              "previous_state_id": 3,
+              "shifts": 12,
+              "next_state_name": "parse_ethernet.$split_0",
+              "next_state_id": 6,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 334
+                },
+                {
+                  "buffer_offset": 2,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 295
+                },
+                {
+                  "buffer_offset": 3,
+                  "extractor_id": 1,
+                  "bit_width": 8,
+                  "dest_container": 294
+                },
+                {
+                  "buffer_offset": 4,
+                  "extractor_id": 2,
+                  "bit_width": 8,
+                  "dest_container": 293
+                },
+                {
+                  "buffer_offset": 5,
+                  "extractor_id": 3,
+                  "bit_width": 8,
+                  "dest_container": 292
+                },
+                {
+                  "buffer_offset": 6,
+                  "extractor_id": 1,
+                  "bit_width": 16,
+                  "dest_container": 333
+                },
+                {
+                  "buffer_offset": 8,
+                  "extractor_id": 2,
+                  "bit_width": 16,
+                  "dest_container": 331
+                },
+                {
+                  "buffer_offset": 10,
+                  "extractor_id": 3,
+                  "bit_width": 16,
+                  "dest_container": 330
+                },
+                {
+                  "buffer_offset": 14,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 260
+                },
+                {
+                  "buffer_offset": 18,
+                  "extractor_id": 1,
+                  "bit_width": 32,
+                  "dest_container": 262
+                },
+                {
+                  "buffer_offset": 22,
+                  "extractor_id": 2,
+                  "bit_width": 32,
+                  "dest_container": 261
+                },
+                {
+                  "buffer_offset": 26,
+                  "extractor_id": 3,
+                  "bit_width": 32,
+                  "dest_container": 265
+                }
+              ],
+              "savesTo": [
+                {
+                  "buffer_offset": 23,
+                  "hardware_id": 2
+                }
+              ]
+            },
+            {
+              "tcam_row": 249,
+              "previous_state_name": "parse_ethernet.$split_0",
+              "matchesOn": [
+                {
+                  "value": "0x11",
+                  "bit_width": 8,
+                  "hardware_id": 2
+                }
+              ],
+              "previous_state_id": 6,
+              "shifts": 22,
+              "next_state_name": "parse_udp",
+              "next_state_id": 7,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 332
+                },
+                {
+                  "buffer_offset": 18,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 264
+                },
+                {
+                  "constant_value": 12,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 66
+                }
+              ]
+            },
+            {
+              "tcam_row": 248,
+              "previous_state_name": "parse_ethernet.$split_0",
+              "matchesOn": [
+                {
+                  "value": "0x**",
+                  "bit_width": 8,
+                  "hardware_id": 2
+                }
+              ],
+              "previous_state_id": 6,
+              "shifts": 22,
+              "next_state_name": "END",
+              "next_state_id": 5,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 332
+                },
+                {
+                  "buffer_offset": 18,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 264
+                },
+                {
+                  "constant_value": 12,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 66
+                }
+              ]
+            },
+            {
+              "tcam_row": 247,
+              "previous_state_name": "parse_udp",
+              "matchesOn": [],
+              "previous_state_id": 7,
+              "shifts": 8,
+              "next_state_name": "parse_p4_header",
+              "next_state_id": 4,
+              "has_counter": false,
+              "extracts": [
+                {
+                  "buffer_offset": 0,
+                  "extractor_id": 0,
+                  "bit_width": 16,
+                  "dest_container": 327
+                },
+                {
+                  "buffer_offset": 2,
+                  "extractor_id": 1,
+                  "bit_width": 16,
+                  "dest_container": 326
+                },
+                {
+                  "buffer_offset": 4,
+                  "extractor_id": 0,
+                  "bit_width": 32,
+                  "dest_container": 263
+                },
+                {
+                  "constant_value": 16,
+                  "extractor_id": 0,
+                  "bit_width": 8,
+                  "dest_container": 66
+                }
+              ]
+            }
+          ],
+          "nStates": 256
+        }
+      ]
+    }
+  },
+  "build_date": "Mon Feb 19 14:14:18 2024",
+  "compiler_version": "9.7.0",
+  "schema_version": "2.4.0",
+  "program_name": "p_tqm.p4",
+  "run_id": "90a8b06887133ca4"
+}

@@ -1,0 +1,977 @@
+{
+    "build_date": "Mon Feb 19 14:14:18 2024",
+    "compiler_version": "9.7.0",
+    "program_name": "p_tqm.p4",
+    "run_id": "90a8b06887133ca4",
+    "schema_version": "1.0.0",
+    "stage_characteristics": [
+        {
+            "clock_cycles": 22,
+            "cycles_contribute_to_latency": 22,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 0
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 26,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 1
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 2,
+            "dependency_to_previous": "action",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 2
+        },
+        {
+            "clock_cycles": 22,
+            "cycles_contribute_to_latency": 22,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 3
+        },
+        {
+            "clock_cycles": 22,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 4
+        },
+        {
+            "clock_cycles": 22,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 5
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 6
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 7
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 8
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 9
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 10
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 11
+        },
+        {
+            "clock_cycles": 22,
+            "cycles_contribute_to_latency": 22,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 13,
+            "stage_number": 0
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 26,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 13,
+            "stage_number": 1
+        },
+        {
+            "clock_cycles": 24,
+            "cycles_contribute_to_latency": 24,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 2
+        },
+        {
+            "clock_cycles": 22,
+            "cycles_contribute_to_latency": 22,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 13,
+            "stage_number": 3
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 4
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 5
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 6
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 7
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 8
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 9
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 10
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false,
+                "max_selector_words": 0
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 11
+        }
+    ],
+    "tables": [
+        {
+            "gress": "egress",
+            "name": "Egress.map_qdepth_to_prob_t",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": false,
+                    "stage_number": 4,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "egress",
+            "name": "Egress.mod_dst_mac_t",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 2
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 12.653950953678473
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "Ingress.forward_t",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_drop",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": false,
+                    "stage_number": 0,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_drop_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_get_diff",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_get_drop_prob",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "egress",
+            "name": "tbl_get_qdepth",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": false,
+                    "stage_number": 1,
+                    "weight": 0.0
+                },
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": false,
+                    "stage_number": 2,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_get_rndnum",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "egress",
+            "name": "tbl_get_weighted_qdepth",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "egress",
+            "name": "tbl_mag_qdepth",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": false,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "egress",
+            "name": "tbl_mod_header",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "egress",
+            "name": "tbl_p_tqm486",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_recirc",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": false,
+                    "stage_number": 0,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_set_drop_prob",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 2
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": false,
+                    "stage_number": 1,
+                    "weight": 21.983106267029976
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "tbl_set_p4_header",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "egress",
+            "name": "tbl_set_qdepth",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 2
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 21.983106267029976
+                }
+            ]
+        }
+    ],
+    "total_latency": [
+        {
+            "gress": "ingress",
+            "latency": 103,
+            "pipe_number": 0
+        },
+        {
+            "gress": "egress",
+            "latency": 163,
+            "pipe_number": 0
+        }
+    ],
+    "total_power": [
+        {
+            "gress": "ingress",
+            "pipe_number": 0,
+            "power": 0.28899342648
+        },
+        {
+            "gress": "egress",
+            "pipe_number": 0,
+            "power": 0.6236964362640001
+        }
+    ]
+}

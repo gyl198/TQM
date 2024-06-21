@@ -1,0 +1,29 @@
+digraph Egress {
+subgraph cluster {
+graph [
+label="", labeljust=r, style=bold];
+0[label=__START__, margin="", shape=rectangle, style=solid];
+1[label=__EXIT__, margin="", shape=rectangle, style=solid];
+2[label="Egress.mod_dst_mac_t", margin="", shape=ellipse, style=solid];
+3[label=tbl_mod_header, margin="", shape=ellipse, style=solid];
+4[label="eg_intr_md.egress_port != 68;", margin="", shape=rectangle, style=solid];
+5[label=tbl_get_weighted_qdepth, margin="", shape=ellipse, style=solid];
+6[label="eg_intr_md.egress_port != 68;", margin="", shape=rectangle, style=solid];
+7[label=tbl_set_qdepth, margin="", shape=ellipse, style=solid];
+8[label=tbl_get_ewma, margin="", shape=ellipse, style=solid];
+9[label=tbl_get_qdepth, margin="", shape=ellipse, style=solid];
+10[label="Egress.map_qdepth_to_prob_t", margin="", shape=ellipse, style=solid];
+0 -> 2[label=""];
+2 -> 3[label=""];
+3 -> 4[label=""];
+4 -> 5[label=TRUE];
+4 -> 6[label=FALSE];
+5 -> 6[label=""];
+6 -> 7[label=TRUE];
+6 -> 8[label=FALSE];
+7 -> 1[label=""];
+8 -> 9[label=""];
+9 -> 10[label=""];
+10 -> 1[label=""];
+}
+}

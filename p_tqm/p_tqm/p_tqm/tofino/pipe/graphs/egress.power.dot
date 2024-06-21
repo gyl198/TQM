@@ -1,0 +1,22 @@
+digraph egress {
+0 [label="$root" shape=box color="black"];
+9 [label="map_qdepth_to_prob_t_0" shape=box color="black"];
+6 [label="mod_dst_mac_t_0" shape=box color="black"];
+3 [label="tbl_get_qdepth" shape=box color="black"];
+7 [label="tbl_get_qdepth$st1" shape=box color="black"];
+4 [label="tbl_get_weighted_qdepth" shape=box color="black"];
+8 [label="tbl_mag_qdepth" shape=box color="black"];
+1 [label="tbl_mod_header" shape=box color="black"];
+2 [label="tbl_p_tqm486" shape=box color="black"];
+5 [label="tbl_set_qdepth" shape=box color="black"];
+0-> 1 [label="$start" color="black"];
+9-> 6 [label="map_qdepth_to_prob" color="black"];
+3-> 7 [label="get_qdepth" color="black"];
+7-> 8 [label="get_qdepth" color="black"];
+4-> 5 [label="get_weighted_qdepth" color="black"];
+8-> 9 [label="mag_qdepth" color="black"];
+1-> 2 [label="mod_header" color="black"];
+2-> 3 [label="p_tqm486" color="black"];
+2-> 4 [label="$false" color="black"];
+5-> 6 [label="set_qdepth" color="black"];
+}

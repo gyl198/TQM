@@ -1,0 +1,51 @@
+digraph table_deps {
+  splines=ortho; rankdir=LR;
+  label="Program: p_tqm
+RunId: 90a8b06887133ca4
+";
+  labelloc=t; labeljust=l;
+  { "Ingress.forward_t"; "tbl_recirc"; "tbl_drop"; "tbl_get_rndnum"; "tbl_set_p4_header"; "tbl_p_tqm486"; "tbl_get_qdepth"; "tbl_mod_header"; "Egress.mod_dst_mac_t"; }
+  { rank = same; "tbl_set_drop_prob"; "tbl_get_drop_prob"; "tbl_get_weighted_qdepth"; "tbl_get_qdepth"; }
+  { rank = same; "tbl_get_diff"; "tbl_set_qdepth"; "tbl_mag_qdepth"; }
+  { rank = same; "tbl_drop_0"; "Egress.map_qdepth_to_prob_t"; }
+   "Ingress.forward_t" -> "tbl_recirc" [ label= "",color=green ];
+   "Ingress.forward_t" -> "tbl_drop" [ label= "",color=green ];
+   "tbl_drop" -> "tbl_set_drop_prob" [ label= "",color=green ];
+   "Ingress.forward_t" -> "tbl_get_rndnum" [ label= "",color=green ];
+   "Ingress.forward_t" -> "tbl_set_p4_header" [ label= "",color=green ];
+   "Ingress.forward_t" -> "tbl_get_drop_prob" [ label= "",color=green ];
+   "Ingress.forward_t" -> "tbl_get_diff" [ label= "",color=green ];
+   "Ingress.forward_t" -> "tbl_drop_0" [ label= "",color=green ];
+   "tbl_p_tqm486" -> "tbl_get_weighted_qdepth" [ label= "",color=green ];
+   "tbl_p_tqm486" -> "tbl_set_qdepth" [ label= "",color=green ];
+   "tbl_p_tqm486" -> "tbl_get_qdepth" [ label= "",color=green ];
+   "tbl_p_tqm486" -> "tbl_get_qdepth" [ label= "",color=green ];
+   "tbl_p_tqm486" -> "tbl_mag_qdepth" [ label= "",color=green ];
+   "tbl_p_tqm486" -> "Egress.map_qdepth_to_prob_t" [ label= "",color=green ];
+   "tbl_recirc" -> "tbl_set_drop_prob" [ label= "",color=gold ];
+   "Ingress.forward_t" -> "tbl_get_drop_prob" [ label= "",color=gold ];
+   "tbl_get_rndnum" -> "tbl_get_diff" [ label= "",color=blue ];
+   "tbl_get_drop_prob" -> "tbl_get_diff" [ label= "",color=blue ];
+   "tbl_get_diff" -> "tbl_drop_0" [ label= "",color=blue ];
+   "Ingress.forward_t" -> "tbl_drop_0" [ label= "",color=red ];
+   "tbl_mod_header" -> "tbl_get_weighted_qdepth" [ label= "",color=blue ];
+   "tbl_get_weighted_qdepth" -> "tbl_set_qdepth" [ label= "",color=gold ];
+   "tbl_get_qdepth" -> "tbl_get_qdepth" [ label= "",color=gold ];
+   "tbl_get_qdepth" -> "tbl_mag_qdepth" [ label= "",color=red ];
+   "tbl_get_qdepth" -> "tbl_mag_qdepth" [ label= "",color=blue ];
+   "tbl_mag_qdepth" -> "Egress.map_qdepth_to_prob_t" [ label= "",color=gold ];
+   "tbl_get_diff" -> "tbl_drop_0" [ label= "",color=pink ];
+   "tbl_mag_qdepth" -> "Egress.map_qdepth_to_prob_t" [ label= "",color=pink ];
+   "tbl_get_drop_prob" -> "tbl_get_diff" [ label= "",color=pink ];
+   "tbl_get_weighted_qdepth" -> "tbl_set_qdepth" [ label= "",color=pink ];
+   "tbl_get_qdepth" -> "tbl_mag_qdepth" [ label= "",color=pink ];
+   "tbl_recirc" -> "tbl_drop" [ label= "",color=pink ];
+   "tbl_get_rndnum" -> "tbl_get_diff" [ label= "",color=pink ];
+   "tbl_get_qdepth" -> "tbl_get_qdepth" [ label= "",color=pink ];
+   "tbl_mod_header" -> "tbl_p_tqm486" [ label= "",color=pink ];
+  { rank=max;
+    subgraph cluster_legend { node [ shape=record; fontsize=10];
+      empty [label=<<table border="0" cellborder="0"><tr><td colspan="8">Edge colors</td></tr><tr><td><font color="gold">ixbar_read</font></td><td><font color="blue">action_read</font></td><td><font color="red">output</font></td><td><font color="navy">cont_conflict</font></td><td><font color="cyan">reduction_or_read</font></td><td><font color="cyan">reduction_or_output</font></td><td><font color="pink">anti_table_read</font></td><td><font color="pink">anti_next_action_read</font></td><td><font color="pink">anti_next_table_data</font></td><td><font color="pink">anti_next_table_control</font></td><td><font color="pink">anti_next_table_metadata</font></td><td><font color="black">exit</font></td><td><font color="green">control_action</font></td><td><font color="green">control_condition_true</font></td><td><font color="green">control_condition_false</font></td><td><font color="green">control_table_hit</font></td><td><font color="green">control_table_miss</font></td><td><font color="green">control_default_next_table</font></td><td><font color="green">control_exit</font></td></tr></table>>;]
+    }
+  }
+}

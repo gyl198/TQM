@@ -1,0 +1,1853 @@
+{
+    "schema_version": "1.0.0",
+    "symbols": [
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 386,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "Egress._get_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 374,
+                "column": 58
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 382,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Egress._set_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 369,
+                "column": 58
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 376,
+                    "column": 36
+                }
+            ],
+            "symbol_name": "Egress.coeff",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 366,
+                "column": 24
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 369,
+                    "column": 41
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 374,
+                    "column": 41
+                }
+            ],
+            "symbol_name": "Egress.reg_aver_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 368,
+                "column": 32
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 192,
+                    "column": 20
+                }
+            ],
+            "symbol_name": "Ingress._get_drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 181,
+                "column": 56
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 188,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Ingress._set_drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 176,
+                "column": 56
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 176,
+                    "column": 41
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 181,
+                    "column": 41
+                }
+            ],
+            "symbol_name": "Ingress.reg_drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 175,
+                "column": 32
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 196,
+                    "column": 17
+                }
+            ],
+            "symbol_name": "Ingress.rnd",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 144,
+                "column": 20
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 477,
+                    "column": 8
+                }
+            ],
+            "symbol_name": "pipe",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 475,
+                "column": 3
+            },
+            "symbol_type": "Declaration_Instance_Type_Specialized"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 445,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Egress.get_ewma",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 385,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 446,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Egress.get_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 389,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 438,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Egress.get_weighted_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 340,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 427,
+                    "column": 15
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 428,
+                    "column": 20
+                }
+            ],
+            "symbol_name": "Egress.map_qdepth_to_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 421,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 330,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "Egress.mod_dst_mac",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 323,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 434,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Egress.mod_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 334,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 443,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Egress.set_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 381,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 205,
+                    "column": 4
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 226,
+                    "column": 5
+                }
+            ],
+            "symbol_name": "Ingress.drop",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 152,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 223,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Ingress.get_diff",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 199,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 217,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Ingress.get_drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 191,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 222,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Ingress.get_rndnum",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 195,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 160,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "Ingress.multicast",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 147,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 215,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Ingress.set_drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 187,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 208,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Ingress.set_p4_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 164,
+                "column": 9
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 159,
+                    "column": 3,
+                    "end_line": 161
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 160,
+                    "column": 17
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 329,
+                    "column": 3,
+                    "end_line": 331
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 330,
+                    "column": 14
+                }
+            ],
+            "symbol_name": "NoAction",
+            "declaration": {
+                "file": "/root/bf-sde-9.7.0/install/share/p4c/p4include/core.p4",
+                "line": 70,
+                "column": 8
+            },
+            "symbol_type": "P4Action"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 447,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Egress.map_qdepth_to_prob_t",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 425,
+                "column": 8
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 433,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Egress.mod_dst_mac_t",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 328,
+                "column": 8
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 207,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Ingress.multicast_t",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 157,
+                "column": 11
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_drop",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 205,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_drop_0",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 226,
+                "column": 5
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_get_diff",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 223,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_get_drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 217,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_get_ewma",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 445,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_get_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 446,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_get_rndnum",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 222,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_get_weighted_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 438,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_mod_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 434,
+                "column": 3
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_set_drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 215,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_set_p4_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 208,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [],
+            "symbol_name": "tbl_set_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 443,
+                "column": 4
+            },
+            "symbol_type": "P4Table"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 329,
+                    "column": 10
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 437,
+                    "column": 6
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 442,
+                    "column": 6
+                }
+            ],
+            "symbol_name": "Egress.eg_intr_md.egress_port",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 317,
+                "column": 36
+            },
+            "symbol_type": "Parameter_Type_Header"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 335,
+                    "column": 39
+                }
+            ],
+            "symbol_name": "Egress.eg_intr_md.enq_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 317,
+                "column": 36
+            },
+            "symbol_type": "Parameter_Type_Header"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 336,
+                    "column": 35
+                }
+            ],
+            "symbol_name": "Egress.eg_prsr_md.global_tstamp",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 318,
+                "column": 48
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 324,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Egress.hdr.ethernet.dst_addr",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 314,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 336,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 336,
+                    "column": 68
+                }
+            ],
+            "symbol_name": "Egress.hdr.p4_header.delay",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 314,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 335,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 341,
+                    "column": 26
+                }
+            ],
+            "symbol_name": "Egress.hdr.p4_header.depth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 314,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 422,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Egress.hdr.p4_header.drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 314,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 382,
+                    "column": 23
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 386,
+                    "column": 35
+                }
+            ],
+            "symbol_name": "Egress.hdr.p4_header.egress_port",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 314,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 422,
+                    "column": 29
+                }
+            ],
+            "symbol_name": "Egress.map_qdepth_to_prob.prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 421,
+                "column": 36
+            },
+            "symbol_type": "Parameter_Type_Bits"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 386,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 390,
+                    "column": 28
+                }
+            ],
+            "symbol_name": "Egress.meta.ewma",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 315,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 390,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 426,
+                    "column": 10
+                }
+            ],
+            "symbol_name": "Egress.meta.qdepth_for_match",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 315,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 341,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 371,
+                    "column": 20
+                }
+            ],
+            "symbol_name": "Egress.meta.weighted_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 315,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 324,
+                    "column": 27
+                }
+            ],
+            "symbol_name": "Egress.mod_dst_mac.dst_addr",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 323,
+                "column": 29
+            },
+            "symbol_type": "Parameter_Type_Bits"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 376,
+                    "column": 4
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 376,
+                    "column": 50
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 377,
+                    "column": 13
+                }
+            ],
+            "symbol_name": "Egress.reg_data.val1",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 375,
+                "column": 28
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 371,
+                    "column": 4
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 376,
+                    "column": 20
+                }
+            ],
+            "symbol_name": "Egress.reg_data.val2",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 375,
+                "column": 28
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 377,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Egress.result",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 375,
+                "column": 50
+            },
+            "symbol_type": "Parameter_Type_Bits"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 462,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "EgressDeparser.hdr.ethernet",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 456,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 462,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "EgressDeparser.hdr.ipv4",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 456,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 462,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "EgressDeparser.hdr.p4_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 456,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 462,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "EgressDeparser.hdr.udp",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 456,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 462,
+                    "column": 9
+                }
+            ],
+            "symbol_name": "EgressDeparser.pkt",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 454,
+                "column": 35
+            },
+            "symbol_type": "Parameter_Type_Extern"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 282,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "EgressParser.eg_intr_md",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 278,
+                "column": 37
+            },
+            "symbol_type": "Parameter_Type_Header"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 283,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "EgressParser.hdr.ethernet",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 275,
+                "column": 29
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 284,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "EgressParser.hdr.ipv4",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 275,
+                "column": 29
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 293,
+                    "column": 21
+                }
+            ],
+            "symbol_name": "EgressParser.hdr.ipv4.protocol",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 275,
+                "column": 29
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 305,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "EgressParser.hdr.p4_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 275,
+                "column": 29
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 300,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "EgressParser.hdr.udp",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 275,
+                "column": 29
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 291,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "EgressParser.meta.aver_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 276,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 290,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "EgressParser.meta.ewma",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 276,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 292,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "EgressParser.meta.qdepth_for_match",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 276,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 289,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "EgressParser.meta.weighted_qdepth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 276,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 282,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 283,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 284,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 300,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 305,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "EgressParser.pkt",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 273,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Extern"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 165,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Ingress.hdr.p4_header.delay",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 135,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 166,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Ingress.hdr.p4_header.depth",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 135,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 168,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 178,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "Ingress.hdr.p4_header.drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 135,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 149,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 188,
+                    "column": 26
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 192,
+                    "column": 43
+                }
+            ],
+            "symbol_name": "Ingress.hdr.p4_header.egress_port",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 135,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 167,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Ingress.hdr.p4_header.pad2",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 135,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 153,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Ingress.ig_dprsr_md.drop_ctl",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 140,
+                "column": 53
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 159,
+                    "column": 11
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 204,
+                    "column": 6
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 214,
+                    "column": 6
+                }
+            ],
+            "symbol_name": "Ingress.ig_intr_md.ingress_port",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 138,
+                "column": 37
+            },
+            "symbol_type": "Parameter_Type_Header"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 165,
+                    "column": 25
+                }
+            ],
+            "symbol_name": "Ingress.ig_prsr_md.global_tstamp",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 139,
+                "column": 49
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 148,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "Ingress.ig_tm_md.mcast_grp_a",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 141,
+                "column": 47
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 200,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 225,
+                    "column": 7
+                }
+            ],
+            "symbol_name": "Ingress.meta.diff",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 136,
+                "column": 33
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 192,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 200,
+                    "column": 31
+                }
+            ],
+            "symbol_name": "Ingress.meta.drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 136,
+                "column": 33
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 196,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 200,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "Ingress.meta.rndnum",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 136,
+                "column": 33
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 148,
+                    "column": 35
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 149,
+                    "column": 31
+                }
+            ],
+            "symbol_name": "Ingress.multicast.port",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 147,
+                "column": 26
+            },
+            "symbol_type": "Parameter_Type_Bits"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 178,
+                    "column": 4
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 183,
+                    "column": 13
+                }
+            ],
+            "symbol_name": "Ingress.reg_data",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 182,
+                "column": 28
+            },
+            "symbol_type": "Parameter_Type_Bits"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 183,
+                    "column": 4
+                }
+            ],
+            "symbol_name": "Ingress.result",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 182,
+                "column": 50
+            },
+            "symbol_type": "Parameter_Type_Bits"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 244,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "IngressDeparser.hdr.ethernet",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 238,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 244,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "IngressDeparser.hdr.ipv4",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 238,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 244,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "IngressDeparser.hdr.p4_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 238,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 244,
+                    "column": 18
+                }
+            ],
+            "symbol_name": "IngressDeparser.hdr.udp",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 238,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 244,
+                    "column": 9
+                }
+            ],
+            "symbol_name": "IngressDeparser.pkt",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 236,
+                "column": 36
+            },
+            "symbol_type": "Parameter_Type_Extern"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 108,
+                    "column": 21
+                }
+            ],
+            "symbol_name": "IngressParser.hdr.ethernet",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 87,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 113,
+                    "column": 21
+                }
+            ],
+            "symbol_name": "IngressParser.hdr.ipv4",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 87,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 114,
+                    "column": 27
+                }
+            ],
+            "symbol_name": "IngressParser.hdr.ipv4.protocol",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 87,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 126,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "IngressParser.hdr.p4_header",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 87,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 121,
+                    "column": 15
+                }
+            ],
+            "symbol_name": "IngressParser.hdr.udp",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 87,
+                "column": 30
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 94,
+                    "column": 21
+                }
+            ],
+            "symbol_name": "IngressParser.ig_intr_md",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 90,
+                "column": 38
+            },
+            "symbol_type": "Parameter_Type_Header"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 103,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "IngressParser.meta.color",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 88,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 102,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "IngressParser.meta.diff",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 88,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 101,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "IngressParser.meta.drop_prob",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 88,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 100,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "IngressParser.meta.rndnum",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 88,
+                "column": 31
+            },
+            "symbol_type": "Parameter_Type_Struct"
+        },
+        {
+            "references": [
+                {
+                    "file": "n_tqm.p4",
+                    "line": 94,
+                    "column": 9
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 95,
+                    "column": 9
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 108,
+                    "column": 9
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 113,
+                    "column": 9
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 121,
+                    "column": 3
+                },
+                {
+                    "file": "n_tqm.p4",
+                    "line": 126,
+                    "column": 3
+                }
+            ],
+            "symbol_name": "IngressParser.pkt",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 85,
+                "column": 32
+            },
+            "symbol_type": "Parameter_Type_Extern"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-1",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 204,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-2",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 214,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-3",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 225,
+                "column": 4
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-4",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 437,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-5",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 442,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-6",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 204,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-7",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 214,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-8",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 225,
+                "column": 4
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-9",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 437,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        },
+        {
+            "references": [],
+            "symbol_name": "cond-10",
+            "declaration": {
+                "file": "n_tqm.p4",
+                "line": 442,
+                "column": 3
+            },
+            "symbol_type": "IfStatement"
+        }
+    ],
+    "source_root": "/mnt/onl/data/n_tqm"
+}

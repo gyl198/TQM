@@ -1,0 +1,21 @@
+digraph ingress {
+0 [label="$root" shape=box color="black"];
+2 [label="multicast_t_0" shape=box color="black"];
+4 [label="tbl_drop" shape=box color="black"];
+8 [label="tbl_drop_0" shape=box color="black"];
+6 [label="tbl_get_diff" shape=box color="black"];
+5 [label="tbl_get_drop_prob" shape=box color="black"];
+1 [label="tbl_get_rndnum" shape=box color="black"];
+7 [label="tbl_set_drop_prob" shape=box color="black"];
+3 [label="tbl_set_p4_header" shape=box color="black"];
+0-> 1 [label="$start" color="black"];
+2-> 3 [label="multicast" color="black"];
+2-> 4 [label="$true" color="black"];
+4-> 5 [label="drop" color="black"];
+6-> 8 [label="get_diff" color="black"];
+5-> 6 [label="get_drop_prob" color="black"];
+5-> 7 [label="$true" color="black"];
+1-> 2 [label="get_rndnum" color="black"];
+7-> 6 [label="set_drop_prob" color="black"];
+3-> 5 [label="set_p4_header" color="black"];
+}

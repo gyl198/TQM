@@ -1,0 +1,16 @@
+Allocation history of config default_incremental_alloc
+1: TRYING to allocate SUPERCLUSTER Uid: 1998
+    slice lists:	[ ]
+    rotational clusters:	
+        [[Egress.reg_qdepth$index<10> meta [0:9]]]
+Successfully Allocated
+By slicing into the following superclusters:
+SUPERCLUSTER Uid: 1999
+    slice lists:	[ ]
+    rotational clusters:	
+        [[Egress.reg_qdepth$index<10> meta [0:9]]]
+
+Best Score: {[n_inc_containers: 1, n_inc_small_containers: 1, ], }
+Allocation Decisions:
+allocate: H18[0:9] <- Egress.reg_qdepth$index<10> meta [0:9]
+

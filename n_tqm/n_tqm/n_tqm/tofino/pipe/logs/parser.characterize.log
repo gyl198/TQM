@@ -1,0 +1,49 @@
+Parser Characterization Report:
+Number of states on ingress: 5
+
+Number of matches on ingress: 6
+
+Longest path (5 states) on ingress:
+    $entry_point
+    start
+    start.$oob_stall_0
+    start.$split_0
+    parse_udp
+
+Timing is met for min-sized packet (73 B) running at 100 Gbps
+
+Extractor usage:
++--------------------+-------+-------+--------+--------+------------------+-------+
+|State               |Match  |8-bit  |16-bit  |32-bit  |Total Extractors  |Other  |
++--------------------+-------+-------+--------+--------+------------------+-------+
+|$entry_point        |*      |0      |1       |1       |2                 |       |
+|start               |*      |1      |4       |0       |5                 |       |
+|start.$oob_stall_0  |*      |0      |0       |0       |0                 |       |
+|start.$split_0      |0x11   |4      |4       |4       |12                |       |
+|-                   |0x**   |4      |4       |4       |12                |       |
+|parse_udp           |*      |1      |2       |4       |7                 |       |
++--------------------+-------+-------+--------+--------+------------------+-------+
+Number of states on egress: 5
+
+Number of matches on egress: 6
+
+Longest path (5 states) on egress:
+    $entry_point
+    start
+    start.$split_0
+    start.$split_1
+    parse_udp
+
+Timing is met for min-sized packet (73 B) running at 100 Gbps
+
+Extractor usage:
++----------------+-------+-------+--------+--------+------------------+-------+
+|State           |Match  |8-bit  |16-bit  |32-bit  |Total Extractors  |Other  |
++----------------+-------+-------+--------+--------+------------------+-------+
+|$entry_point    |*      |0      |1       |1       |2                 |       |
+|start           |*      |1      |2       |1       |4                 |       |
+|start.$split_0  |*      |2      |4       |4       |10                |       |
+|start.$split_1  |0x11   |0      |1       |1       |2                 |       |
+|-               |0x**   |0      |1       |1       |2                 |       |
+|parse_udp       |*      |1      |2       |4       |7                 |       |
++----------------+-------+-------+--------+--------+------------------+-------+

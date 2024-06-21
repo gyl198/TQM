@@ -1,0 +1,740 @@
+Table Placement ignores container conflicts? 0
+table placement starting pipe
+ingress: [1948438] 1 00 111 1111
+  cond-6(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948727]
+      tbl_drop
+    $false: [1948504] 0
+      multicast_t_0{ E -1+0, 4 0K } @stage(0)
+      tbl_set_p4_header
+  cond-7(ingress::ig_intr_md.ingress_port == 68; => $true, 1 => $false)
+    $true: [1948869]
+      tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob  512
+    $false: [1948871]
+      tbl_get_drop_prob
+        stateful Ingress.reg_drop_prob  512
+  tbl_get_rndnum
+  tbl_get_diff
+  cond-8(ingress::meta.diff == 0; => $true, 1 => $false)
+    $true: [1949068]
+      tbl_drop_0
+egress: [1956684] 0 01 011
+  mod_dst_mac_t_0{ E -1+0, 8 0K } @stage(0)
+  tbl_mod_header
+  cond-9(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1956955]
+      tbl_get_weighted_qdepth
+  cond-10(egress::eg_intr_md.egress_port == 68; => $false, 1 => $true)
+    $true: [1957256]
+      tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth  512
+    $false: [1957027] 1 11
+      tbl_get_ewma
+        stateful Egress.reg_aver_qdepth  512
+      tbl_get_qdepth
+      map_qdepth_to_prob_t_0{ E 6+0, 4 64K }
+
+stage 0, work: [ 1948438, 1956684 ], partly placed 0, placed 0
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+try_place_table(cond-6, stage=0)
+  Merging with match table multicast_t_0
+  Initial stage is 0, initial entries is 512
+  Selected stage: 0    Furthest stage: 0
+  try_place_table returning 1024 of multicast_t_0 in stage 0
+  Merging with match table tbl_set_p4_header
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 0
+  try_place_table returning 1 of tbl_set_p4_header in stage 0
+  Merging with match table tbl_drop
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 0
+  try_place_table returning 1 of tbl_drop in stage 0
+    Pl vector: [ multicast_t_0, tbl_set_p4_header, tbl_drop ]
+  - skipping cond-7 because it depends on multicast_t_0
+    - removing tbl_get_drop_prob from merge list because it depends on multicast_t_0
+    - removing tbl_set_drop_prob from merge list because it depends on multicast_t_0
+    - skipping gateway cond-7 until mergeable tables are available
+tbl_get_rndnum is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_rndnum, stage=0)
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 0
+  try_place_table returning 1 of tbl_get_rndnum in stage 0
+    Pl vector: [ tbl_get_rndnum ]
+  - skipping tbl_get_diff due to in-sequence control dependence on cond-6
+  - skipping cond-8 due to in-sequence control dependence on cond-6
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+mod_dst_mac_t_0 is not a gateway! Aborting search for merge choices
+try_place_table(mod_dst_mac_t_0, stage=0)
+  Initial stage is 0, initial entries is 512
+  Selected stage: 0    Furthest stage: 0
+  try_place_table returning 1024 of mod_dst_mac_t_0 in stage 0
+    Pl vector: [ mod_dst_mac_t_0 ]
+tbl_mod_header is not a gateway! Aborting search for merge choices
+try_place_table(tbl_mod_header, stage=0)
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 0
+  try_place_table returning 1 of tbl_mod_header in stage 0
+    Pl vector: [ tbl_mod_header ]
+  - skipping cond-9 because it depends on tbl_mod_header
+    - removing tbl_get_weighted_qdepth from merge list because it depends on tbl_mod_header
+    - skipping gateway cond-9 until mergeable tables are available
+  - skipping cond-10 because it depends on tbl_mod_header
+    - removing tbl_get_ewma from merge list because it depends on tbl_get_weighted_qdepth
+    - removing tbl_set_qdepth from merge list because it depends on tbl_get_weighted_qdepth
+    - skipping gateway cond-10 until mergeable tables are available
+found 6 tables that could be placed: [ multicast_t_0, tbl_set_p4_header, tbl_drop, tbl_get_rndnum, mod_dst_mac_t_0, tbl_mod_header ]
+Initial best is first table seen: multicast_t_0
+For trial t : tbl_set_p4_header with best: multicast_t_0
+    Keeping best multicast_t_0 for reason: earlier stage provided
+For trial t : tbl_drop with best: multicast_t_0
+    Keeping best multicast_t_0 for reason: earlier stage provided
+For trial t : tbl_get_rndnum with best: multicast_t_0
+    Keeping best multicast_t_0 for reason: earlier stage provided
+For trial t : mod_dst_mac_t_0 with best: multicast_t_0
+    Updating best to mod_dst_mac_t_0 from multicast_t_0 for reason: longer downward prop control-included dependence tail chain
+For trial t : tbl_mod_header with best: mod_dst_mac_t_0
+    Keeping best mod_dst_mac_t_0 for reason: earlier stage provided
+Best table have stage or priority pragma
+placing 1024 entries of mod_dst_mac_t_0 in stage 0(0) FormatType(02)
+stage 0, work: [ 1948438, 1956684 ], partly placed 0, placed 1
+    { id=1 ram=2 tcam=0 mram=0 eixb=2 tixb=0 malu=0 salu=0 }
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+try_place_table(cond-6, stage=0)
+  Merging with match table multicast_t_0
+  Initial stage is 0, initial entries is 512
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1024 of multicast_t_0 in stage 0
+  Merging with match table tbl_set_p4_header
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1 of tbl_set_p4_header in stage 0
+  Merging with match table tbl_drop
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1 of tbl_drop in stage 0
+    Pl vector: [ multicast_t_0, tbl_set_p4_header, tbl_drop ]
+  - skipping cond-7 because it depends on multicast_t_0
+    - removing tbl_get_drop_prob from merge list because it depends on multicast_t_0
+    - removing tbl_set_drop_prob from merge list because it depends on multicast_t_0
+    - skipping gateway cond-7 until mergeable tables are available
+tbl_get_rndnum is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_rndnum, stage=0)
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1 of tbl_get_rndnum in stage 0
+    Pl vector: [ tbl_get_rndnum ]
+  - skipping tbl_get_diff due to in-sequence control dependence on cond-6
+  - skipping cond-8 due to in-sequence control dependence on cond-6
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+tbl_mod_header is not a gateway! Aborting search for merge choices
+try_place_table(tbl_mod_header, stage=0)
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1 of tbl_mod_header in stage 0
+    Pl vector: [ tbl_mod_header ]
+  - skipping cond-9 because it depends on tbl_mod_header
+    - removing tbl_get_weighted_qdepth from merge list because it depends on tbl_mod_header
+    - skipping gateway cond-9 until mergeable tables are available
+  - skipping cond-10 because it depends on tbl_mod_header
+    - removing tbl_get_ewma from merge list because it depends on tbl_get_weighted_qdepth
+    - removing tbl_set_qdepth from merge list because it depends on tbl_get_weighted_qdepth
+    - skipping gateway cond-10 until mergeable tables are available
+found 5 tables that could be placed: [ multicast_t_0, tbl_set_p4_header, tbl_drop, tbl_get_rndnum, tbl_mod_header ]
+Initial best is first table seen: multicast_t_0
+For trial t : tbl_set_p4_header with best: multicast_t_0
+    Keeping best multicast_t_0 for reason: earlier stage provided
+For trial t : tbl_drop with best: multicast_t_0
+    Keeping best multicast_t_0 for reason: earlier stage provided
+For trial t : tbl_get_rndnum with best: multicast_t_0
+    Keeping best multicast_t_0 for reason: earlier stage provided
+For trial t : tbl_mod_header with best: multicast_t_0
+    Keeping best multicast_t_0 for reason: earlier stage provided
+Best table have stage or priority pragma
+placing 1024 entries of multicast_t_0 (with gw cond-6) in stage 0(1) FormatType(02)
+potential backfill tbl_get_rndnum before multicast_t_0
+stage 0, work: [ 1956684, 1948727, 1948504 ], partly placed 0, placed 2
+    { id=2 ram=3 tcam=0 mram=0 eixb=4 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+tbl_mod_header is not a gateway! Aborting search for merge choices
+try_place_table(tbl_mod_header, stage=0)
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1 of tbl_mod_header in stage 0
+    Pl vector: [ tbl_mod_header ]
+  - skipping cond-9 because it depends on tbl_mod_header
+    - removing tbl_get_weighted_qdepth from merge list because it depends on tbl_mod_header
+    - skipping gateway cond-9 until mergeable tables are available
+  - skipping cond-10 because it depends on tbl_mod_header
+    - removing tbl_get_ewma from merge list because it depends on tbl_get_weighted_qdepth
+    - removing tbl_set_qdepth from merge list because it depends on tbl_get_weighted_qdepth
+    - skipping gateway cond-10 until mergeable tables are available
+  Group table: tbl_drop
+tbl_drop is not a gateway! Aborting search for merge choices
+try_place_table(tbl_drop, stage=0)
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1 of tbl_drop in stage 0
+    Pl vector: [ tbl_drop ]
+  Group table: multicast_t_0
+  Group table: tbl_set_p4_header
+    - skipping multicast_t_0 as its already done
+tbl_set_p4_header is not a gateway! Aborting search for merge choices
+try_place_table(tbl_set_p4_header, stage=0)
+  - action dependency between multicast_t_0 and table tbl_set_p4_header due to PHV allocation advances stage to 1
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 1
+  try_place_table returning 1 of tbl_set_p4_header in stage 1
+    Pl vector: [ tbl_set_p4_header ]
+found 3 tables that could be placed: [ tbl_mod_header, tbl_drop, tbl_set_p4_header ]
+Initial best is first table seen: tbl_mod_header
+For trial t : tbl_drop with best: tbl_mod_header
+    Keeping best tbl_mod_header for reason: longer downward prop control-included dependence tail chain
+For trial t : tbl_set_p4_header with best: tbl_mod_header
+    Keeping best tbl_mod_header for reason: earlier stage calculated
+placing 1 entries of tbl_mod_header in stage 0(2) FormatType(02)
+stage 0, work: [ 1956684, 1948727, 1948504 ], partly placed 0, placed 3
+    { id=2 ram=3 tcam=0 mram=0 eixb=4 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+    - skipping tbl_mod_header as its already done
+try_place_table(cond-9, stage=0)
+  Merging with match table tbl_get_weighted_qdepth
+  - dependency between tbl_mod_header and table advances stage
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 1
+  try_place_table returning 1 of tbl_get_weighted_qdepth in stage 1
+    Pl vector: [ tbl_get_weighted_qdepth ]
+  - skipping cond-10 because it depends on tbl_get_weighted_qdepth
+    - removing tbl_get_ewma from merge list because it depends on tbl_get_weighted_qdepth
+    - removing tbl_set_qdepth from merge list because it depends on tbl_get_weighted_qdepth
+    - skipping gateway cond-10 until mergeable tables are available
+  Group table: tbl_drop
+tbl_drop is not a gateway! Aborting search for merge choices
+try_place_table(tbl_drop, stage=0)
+  Initial stage is 0, initial entries is 1
+  Selected stage: 0    Furthest stage: 1
+  try_place_table returning 1 of tbl_drop in stage 0
+    Pl vector: [ tbl_drop ]
+  Group table: multicast_t_0
+  Group table: tbl_set_p4_header
+    - skipping multicast_t_0 as its already done
+tbl_set_p4_header is not a gateway! Aborting search for merge choices
+try_place_table(tbl_set_p4_header, stage=0)
+  - action dependency between multicast_t_0 and table tbl_set_p4_header due to PHV allocation advances stage to 1
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 1
+  try_place_table returning 1 of tbl_set_p4_header in stage 1
+    Pl vector: [ tbl_set_p4_header ]
+found 3 tables that could be placed: [ tbl_get_weighted_qdepth, tbl_drop, tbl_set_p4_header ]
+Initial best is first table seen: tbl_get_weighted_qdepth
+For trial t : tbl_drop with best: tbl_get_weighted_qdepth
+    Updating best to tbl_drop from tbl_get_weighted_qdepth for reason: earlier stage calculated
+For trial t : tbl_set_p4_header with best: tbl_drop
+    Keeping best tbl_drop for reason: earlier stage calculated
+placing 1 entries of tbl_drop in stage 0(3) FormatType(02)
+stage 0, work: [ 1956684, 1948504 ], partly placed 0, placed 4
+    { id=2 ram=3 tcam=0 mram=0 eixb=4 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+    - skipping tbl_mod_header as its already done
+try_place_table(cond-9, stage=0)
+  Merging with match table tbl_get_weighted_qdepth
+  - dependency between tbl_mod_header and table advances stage
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 1
+  try_place_table returning 1 of tbl_get_weighted_qdepth in stage 1
+    Pl vector: [ tbl_get_weighted_qdepth ]
+  - skipping cond-10 because it depends on tbl_get_weighted_qdepth
+    - removing tbl_get_ewma from merge list because it depends on tbl_get_weighted_qdepth
+    - removing tbl_set_qdepth from merge list because it depends on tbl_get_weighted_qdepth
+    - skipping gateway cond-10 until mergeable tables are available
+  Group table: multicast_t_0
+  Group table: tbl_set_p4_header
+    - skipping multicast_t_0 as its already done
+tbl_set_p4_header is not a gateway! Aborting search for merge choices
+try_place_table(tbl_set_p4_header, stage=0)
+  - action dependency between multicast_t_0 and table tbl_set_p4_header due to PHV allocation advances stage to 1
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 1
+  try_place_table returning 1 of tbl_set_p4_header in stage 1
+    Pl vector: [ tbl_set_p4_header ]
+found 2 tables that could be placed: [ tbl_get_weighted_qdepth, tbl_set_p4_header ]
+Initial best is first table seen: tbl_get_weighted_qdepth
+For trial t : tbl_set_p4_header with best: tbl_get_weighted_qdepth
+    Updating best to tbl_set_p4_header from tbl_get_weighted_qdepth for reason: longer control-excluded dependence tail chain
+try to backfill tbl_get_rndnum before multicast_t_0
+placing 1 entries of tbl_get_rndnum in stage 0(1) FormatType(02) (backfilled)
+stage 0, work: [ 1956684, 1948504 ], partly placed 0, placed 5
+    { id=2 ram=3 tcam=0 mram=0 eixb=4 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+    - skipping tbl_mod_header as its already done
+try_place_table(cond-9, stage=0)
+  Merging with match table tbl_get_weighted_qdepth
+  - dependency between tbl_mod_header and table advances stage
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 1
+  try_place_table returning 1 of tbl_get_weighted_qdepth in stage 1
+    Pl vector: [ tbl_get_weighted_qdepth ]
+  - skipping cond-10 because it depends on tbl_get_weighted_qdepth
+    - removing tbl_get_ewma from merge list because it depends on tbl_get_weighted_qdepth
+    - removing tbl_set_qdepth from merge list because it depends on tbl_get_weighted_qdepth
+    - skipping gateway cond-10 until mergeable tables are available
+  Group table: multicast_t_0
+  Group table: tbl_set_p4_header
+    - skipping multicast_t_0 as its already done
+tbl_set_p4_header is not a gateway! Aborting search for merge choices
+try_place_table(tbl_set_p4_header, stage=0)
+  - action dependency between multicast_t_0 and table tbl_set_p4_header due to PHV allocation advances stage to 1
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 1
+  try_place_table returning 1 of tbl_set_p4_header in stage 1
+    Pl vector: [ tbl_set_p4_header ]
+found 2 tables that could be placed: [ tbl_get_weighted_qdepth, tbl_set_p4_header ]
+Initial best is first table seen: tbl_get_weighted_qdepth
+For trial t : tbl_set_p4_header with best: tbl_get_weighted_qdepth
+    Updating best to tbl_set_p4_header from tbl_get_weighted_qdepth for reason: longer control-excluded dependence tail chain
+placing 1 entries of tbl_set_p4_header in stage 1(10) FormatType(02)
+stage 1, work: [ 1956684, 1948438 ], partly placed 0, placed 6
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+    - skipping tbl_mod_header as its already done
+try_place_table(cond-9, stage=1)
+  Merging with match table tbl_get_weighted_qdepth
+  Initial stage is 1, initial entries is 1
+  Selected stage: 1    Furthest stage: 2
+  try_place_table returning 1 of tbl_get_weighted_qdepth in stage 1
+    Pl vector: [ tbl_get_weighted_qdepth ]
+  - skipping cond-10 because it depends on tbl_get_weighted_qdepth
+    - removing tbl_get_ewma from merge list because it depends on tbl_get_weighted_qdepth
+    - removing tbl_set_qdepth from merge list because it depends on tbl_get_weighted_qdepth
+    - skipping gateway cond-10 until mergeable tables are available
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+try_place_table(cond-7, stage=1)
+  Merging with match table tbl_get_drop_prob
+  - dependency between tbl_set_p4_header and table advances stage
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 2
+  try_place_table returning 1 of tbl_get_drop_prob in stage 2 (need more)
+  Merging with match table tbl_set_drop_prob
+  - dependency between tbl_set_p4_header and table advances stage
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 2
+  try_place_table returning 1 of tbl_set_drop_prob in stage 2 (need more)
+    Pl vector: [ tbl_get_drop_prob, tbl_set_drop_prob ]
+    - skipping tbl_get_rndnum as its already done
+  - skipping tbl_get_diff due to in-sequence control dependence on cond-7
+  - skipping cond-8 due to in-sequence control dependence on cond-7
+found 3 tables that could be placed: [ tbl_get_weighted_qdepth, tbl_get_drop_prob, tbl_set_drop_prob ]
+Initial best is first table seen: tbl_get_weighted_qdepth
+For trial t : tbl_get_drop_prob with best: tbl_get_weighted_qdepth
+    Keeping best tbl_get_weighted_qdepth for reason: earlier stage calculated
+For trial t : tbl_set_drop_prob with best: tbl_get_weighted_qdepth
+    Keeping best tbl_get_weighted_qdepth for reason: earlier stage calculated
+placing 1 entries of tbl_get_weighted_qdepth (with gw cond-9) in stage 1(11) FormatType(02)
+stage 1, work: [ 1956684, 1948438 ], partly placed 0, placed 7
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+    - skipping tbl_mod_header as its already done
+    - skipping cond-9 as its already done
+try_place_table(cond-10, stage=1)
+  Merging with match table tbl_get_ewma
+  - dependency between tbl_get_weighted_qdepth and table advances stage
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 2
+  try_place_table returning 1 of tbl_get_ewma in stage 2 (need more)
+  Merging with match table tbl_set_qdepth
+  - dependency between tbl_get_weighted_qdepth and table advances stage
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 2
+  try_place_table returning 1 of tbl_set_qdepth in stage 2 (need more)
+    Pl vector: [ tbl_get_ewma, tbl_set_qdepth ]
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+try_place_table(cond-7, stage=1)
+  Merging with match table tbl_get_drop_prob
+  - dependency between tbl_set_p4_header and table advances stage
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 2
+  try_place_table returning 1 of tbl_get_drop_prob in stage 2 (need more)
+  Merging with match table tbl_set_drop_prob
+  - dependency between tbl_set_p4_header and table advances stage
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 2
+  try_place_table returning 1 of tbl_set_drop_prob in stage 2 (need more)
+    Pl vector: [ tbl_get_drop_prob, tbl_set_drop_prob ]
+    - skipping tbl_get_rndnum as its already done
+  - skipping tbl_get_diff due to in-sequence control dependence on cond-7
+  - skipping cond-8 due to in-sequence control dependence on cond-7
+found 4 tables that could be placed: [ tbl_get_ewma, tbl_set_qdepth, tbl_get_drop_prob, tbl_set_drop_prob ]
+Initial best is first table seen: tbl_get_ewma
+For trial t : tbl_set_qdepth with best: tbl_get_ewma
+    Keeping best tbl_get_ewma for reason: longer downward prop control-included dependence tail chain
+For trial t : tbl_get_drop_prob with best: tbl_get_ewma
+    Updating best to tbl_get_drop_prob from tbl_get_ewma for reason: longer downward dominance frontier dependence chain
+For trial t : tbl_set_drop_prob with best: tbl_get_drop_prob
+    Keeping best tbl_get_drop_prob for reason: longer downward prop control-included dependence tail chain
+placing 1 entries of tbl_get_drop_prob (with gw cond-7) in stage 2(20) FormatType(042) (need more)
+stage 2, work: [ 1956684, 1948869, 1948871 ], partly placed 1, placed 8
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+    - skipping tbl_mod_header as its already done
+    - skipping cond-9 as its already done
+try_place_table(cond-10, stage=2)
+  Merging with match table tbl_get_ewma
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 3
+  try_place_table returning 1 of tbl_get_ewma in stage 2 (need more)
+  Merging with match table tbl_set_qdepth
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 3
+  try_place_table returning 1 of tbl_set_qdepth in stage 2 (need more)
+    Pl vector: [ tbl_get_ewma, tbl_set_qdepth ]
+  Group table: tbl_set_drop_prob
+tbl_set_drop_prob is not a gateway! Aborting search for merge choices
+try_place_table(tbl_set_drop_prob, stage=2)
+    tbl_get_drop_prob is now also placed (1)
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 3
+  try_place_table returning 1 of tbl_set_drop_prob in stage 2
+    Pl vector: [ tbl_set_drop_prob ]
+  Group table: tbl_get_drop_prob
+tbl_get_drop_prob is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_drop_prob, stage=2)
+  Cannot place multiple sections of an individual table in the same stage
+    Pl vector: []
+found 3 tables that could be placed: [ tbl_get_ewma, tbl_set_qdepth, tbl_set_drop_prob ]
+Initial best is first table seen: tbl_get_ewma
+For trial t : tbl_set_qdepth with best: tbl_get_ewma
+    Keeping best tbl_get_ewma for reason: longer downward prop control-included dependence tail chain
+For trial t : tbl_set_drop_prob with best: tbl_get_ewma
+    Updating best to tbl_set_drop_prob from tbl_get_ewma for reason: completes more shared tables
+placing 1 entries of tbl_set_drop_prob in stage 2(21) FormatType(022)
+stage 2, work: [ 1956684, 1948871 ], partly placed 0, placed 9
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: mod_dst_mac_t_0
+  Group table: tbl_mod_header
+  Group table: cond-9
+  Group table: cond-10
+    - skipping mod_dst_mac_t_0 as its already done
+    - skipping tbl_mod_header as its already done
+    - skipping cond-9 as its already done
+try_place_table(cond-10, stage=2)
+  Merging with match table tbl_get_ewma
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 3
+  try_place_table returning 1 of tbl_get_ewma in stage 2 (need more)
+  Merging with match table tbl_set_qdepth
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 3
+  try_place_table returning 1 of tbl_set_qdepth in stage 2 (need more)
+    Pl vector: [ tbl_get_ewma, tbl_set_qdepth ]
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+    - skipping cond-7 as its already done
+    - skipping tbl_get_rndnum as its already done
+tbl_get_diff is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_diff, stage=2)
+  - dependency between tbl_get_drop_prob and table advances stage
+  Initial stage is 3, initial entries is 1
+  Selected stage: 3    Furthest stage: 3
+  try_place_table returning 1 of tbl_get_diff in stage 3
+    Pl vector: [ tbl_get_diff ]
+  - skipping cond-8 due to in-sequence control dependence on tbl_get_diff
+found 3 tables that could be placed: [ tbl_get_ewma, tbl_set_qdepth, tbl_get_diff ]
+Initial best is first table seen: tbl_get_ewma
+For trial t : tbl_set_qdepth with best: tbl_get_ewma
+    Keeping best tbl_get_ewma for reason: longer downward prop control-included dependence tail chain
+For trial t : tbl_get_diff with best: tbl_get_ewma
+    Keeping best tbl_get_ewma for reason: earlier stage calculated
+placing 1 entries of tbl_get_ewma (with gw cond-10) in stage 2(22) FormatType(042) (need more)
+stage 2, work: [ 1948438, 1957256, 1957027 ], partly placed 1, placed 10
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+    - skipping cond-7 as its already done
+    - skipping tbl_get_rndnum as its already done
+tbl_get_diff is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_diff, stage=2)
+  - dependency between tbl_get_drop_prob and table advances stage
+  Initial stage is 3, initial entries is 1
+  Selected stage: 3    Furthest stage: 3
+  try_place_table returning 1 of tbl_get_diff in stage 3
+    Pl vector: [ tbl_get_diff ]
+  - skipping cond-8 due to in-sequence control dependence on tbl_get_diff
+  Group table: tbl_set_qdepth
+tbl_set_qdepth is not a gateway! Aborting search for merge choices
+try_place_table(tbl_set_qdepth, stage=2)
+    tbl_get_ewma is now also placed (1)
+  Initial stage is 2, initial entries is 1
+  Selected stage: 2    Furthest stage: 3
+  try_place_table returning 1 of tbl_set_qdepth in stage 2
+    Pl vector: [ tbl_set_qdepth ]
+  Group table: tbl_get_ewma
+  Group table: tbl_get_qdepth
+  Group table: map_qdepth_to_prob_t_0
+tbl_get_ewma is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_ewma, stage=2)
+  Cannot place multiple sections of an individual table in the same stage
+    Pl vector: []
+  - skipping tbl_get_qdepth due to in-sequence control dependence on tbl_get_ewma
+  - skipping map_qdepth_to_prob_t_0 due to in-sequence control dependence on tbl_get_ewma
+found 2 tables that could be placed: [ tbl_get_diff, tbl_set_qdepth ]
+Initial best is first table seen: tbl_get_diff
+For trial t : tbl_set_qdepth with best: tbl_get_diff
+    Updating best to tbl_set_qdepth from tbl_get_diff for reason: earlier stage calculated
+placing 1 entries of tbl_set_qdepth in stage 2(23) FormatType(022)
+stage 2, work: [ 1948438, 1957027 ], partly placed 0, placed 11
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+    - skipping cond-7 as its already done
+    - skipping tbl_get_rndnum as its already done
+tbl_get_diff is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_diff, stage=2)
+  - dependency between tbl_get_drop_prob and table advances stage
+  Initial stage is 3, initial entries is 1
+  Selected stage: 3    Furthest stage: 3
+  try_place_table returning 1 of tbl_get_diff in stage 3
+    Pl vector: [ tbl_get_diff ]
+  - skipping cond-8 due to in-sequence control dependence on tbl_get_diff
+  Group table: tbl_get_ewma
+  Group table: tbl_get_qdepth
+  Group table: map_qdepth_to_prob_t_0
+    - skipping tbl_get_ewma as its already done
+tbl_get_qdepth is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_qdepth, stage=2)
+  - dependency between tbl_get_ewma and table advances stage
+  Initial stage is 3, initial entries is 1
+  Selected stage: 3    Furthest stage: 3
+  try_place_table returning 1 of tbl_get_qdepth in stage 3
+    Pl vector: [ tbl_get_qdepth ]
+  - skipping map_qdepth_to_prob_t_0 due to in-sequence control dependence on tbl_get_qdepth
+found 2 tables that could be placed: [ tbl_get_diff, tbl_get_qdepth ]
+Initial best is first table seen: tbl_get_diff
+For trial t : tbl_get_qdepth with best: tbl_get_diff
+    Updating best to tbl_get_qdepth from tbl_get_diff for reason: default choice
+placing 1 entries of tbl_get_qdepth in stage 3(30) FormatType(02)
+stage 3, work: [ 1948438, 1957027 ], partly placed 0, placed 12
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+    - skipping cond-7 as its already done
+    - skipping tbl_get_rndnum as its already done
+tbl_get_diff is not a gateway! Aborting search for merge choices
+try_place_table(tbl_get_diff, stage=3)
+  Initial stage is 3, initial entries is 1
+  Selected stage: 3    Furthest stage: 4
+  try_place_table returning 1 of tbl_get_diff in stage 3
+    Pl vector: [ tbl_get_diff ]
+  - skipping cond-8 due to in-sequence control dependence on tbl_get_diff
+  Group table: tbl_get_ewma
+  Group table: tbl_get_qdepth
+  Group table: map_qdepth_to_prob_t_0
+    - skipping tbl_get_ewma as its already done
+    - skipping tbl_get_qdepth as its already done
+map_qdepth_to_prob_t_0 is not a gateway! Aborting search for merge choices
+try_place_table(map_qdepth_to_prob_t_0, stage=3)
+  - dependency between tbl_get_qdepth and table advances stage
+  Initial stage is 4, initial entries is 65536
+  Selected stage: 4    Furthest stage: 4
+  try_place_table returning 65536 of map_qdepth_to_prob_t_0 in stage 4
+    Pl vector: [ map_qdepth_to_prob_t_0 ]
+found 2 tables that could be placed: [ tbl_get_diff, map_qdepth_to_prob_t_0 ]
+Initial best is first table seen: tbl_get_diff
+For trial t : map_qdepth_to_prob_t_0 with best: tbl_get_diff
+    Keeping best tbl_get_diff for reason: earlier stage calculated
+placing 1 entries of tbl_get_diff in stage 3(31) FormatType(02)
+stage 3, work: [ 1948438, 1957027 ], partly placed 0, placed 13
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 }
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+    - skipping cond-7 as its already done
+    - skipping tbl_get_rndnum as its already done
+    - skipping tbl_get_diff as its already done
+try_place_table(cond-8, stage=3)
+  Merging with match table tbl_drop_0
+  - dependency between tbl_get_diff and table advances stage
+  Initial stage is 4, initial entries is 1
+  Selected stage: 4    Furthest stage: 4
+  try_place_table returning 1 of tbl_drop_0 in stage 4
+    Pl vector: [ tbl_drop_0 ]
+  Group table: tbl_get_ewma
+  Group table: tbl_get_qdepth
+  Group table: map_qdepth_to_prob_t_0
+    - skipping tbl_get_ewma as its already done
+    - skipping tbl_get_qdepth as its already done
+map_qdepth_to_prob_t_0 is not a gateway! Aborting search for merge choices
+try_place_table(map_qdepth_to_prob_t_0, stage=3)
+  - dependency between tbl_get_qdepth and table advances stage
+  Initial stage is 4, initial entries is 65536
+  Selected stage: 4    Furthest stage: 4
+  try_place_table returning 65536 of map_qdepth_to_prob_t_0 in stage 4
+    Pl vector: [ map_qdepth_to_prob_t_0 ]
+found 2 tables that could be placed: [ tbl_drop_0, map_qdepth_to_prob_t_0 ]
+Initial best is first table seen: tbl_drop_0
+For trial t : map_qdepth_to_prob_t_0 with best: tbl_drop_0
+    Updating best to map_qdepth_to_prob_t_0 from tbl_drop_0 for reason: default choice
+placing 65536 entries of map_qdepth_to_prob_t_0 in stage 4(40) FormatType(02)
+stage 4, work: [ 1948438 ], partly placed 0, placed 14
+    { id=1 ram=16 tcam=0 mram=0 eixb=3 tixb=0 malu=0 salu=0 }
+  Group table: cond-6
+  Group table: cond-7
+  Group table: tbl_get_rndnum
+  Group table: tbl_get_diff
+  Group table: cond-8
+    - skipping cond-6 as its already done
+    - skipping cond-7 as its already done
+    - skipping tbl_get_rndnum as its already done
+    - skipping tbl_get_diff as its already done
+try_place_table(cond-8, stage=4)
+  Merging with match table tbl_drop_0
+  Initial stage is 4, initial entries is 1
+  Selected stage: 4    Furthest stage: 5
+  try_place_table returning 1 of tbl_drop_0 in stage 4
+    Pl vector: [ tbl_drop_0 ]
+found 1 tables that could be placed: [ tbl_drop_0 ]
+Initial best is first table seen: tbl_drop_0
+placing 1 entries of tbl_drop_0 (with gw cond-8) in stage 4(41) FormatType(02)
+Table placement placed 15 tables in 5 stages
+  Table tbl_drop_0 logical id 0x41 entries=1
+  Gateway cond-8 is also logical id 0x41
+  Table map_qdepth_to_prob_t_0 logical id 0x40 entries=65536
+  Table tbl_get_diff logical id 0x31 entries=1
+  Table tbl_get_qdepth logical id 0x30 entries=1
+  Table tbl_set_qdepth logical id 0x23 entries=1
+    attached table Egress.reg_aver_qdepth entries=512
+  Table tbl_get_ewma logical id 0x22 entries=1
+    attached table Egress.reg_aver_qdepth entries=512
+  Gateway cond-10 is also logical id 0x22
+  Table tbl_set_drop_prob logical id 0x21 entries=1
+    attached table Ingress.reg_drop_prob entries=512
+  Table tbl_get_drop_prob logical id 0x20 entries=1
+    attached table Ingress.reg_drop_prob entries=512
+  Gateway cond-7 is also logical id 0x20
+  Table tbl_get_weighted_qdepth logical id 0x11 entries=1
+  Gateway cond-9 is also logical id 0x11
+  Table tbl_set_p4_header logical id 0x10 entries=1
+  Table tbl_drop logical id 0x4 entries=1
+  Table tbl_mod_header logical id 0x3 entries=1
+  Table multicast_t_0 logical id 0x2 entries=1024
+  Gateway cond-6 is also logical id 0x2
+  Table tbl_get_rndnum logical id 0x1 entries=1
+  Table mod_dst_mac_t_0 logical id 0x0 entries=1024
+Finished table placement decisions pipe
+folding gateway cond-6 onto multicast_t_0
+  Adding Ternary Indirect table to tbl_drop
+  Adding Ternary Indirect table to tbl_set_p4_header
+  Adding Action Data Table to tbl_set_p4_header
+folding gateway cond-7 onto tbl_get_drop_prob
+  Adding Ternary Indirect table to tbl_get_diff
+folding gateway cond-8 onto tbl_drop_0
+  Adding Ternary Indirect table to tbl_drop_0
+  Adding Action Data Table to mod_dst_mac_t_0
+  Adding Ternary Indirect table to tbl_mod_header
+folding gateway cond-9 onto tbl_get_weighted_qdepth
+  Adding Ternary Indirect table to tbl_get_weighted_qdepth
+folding gateway cond-10 onto tbl_get_ewma
+  Adding Ternary Indirect table to tbl_get_qdepth
+  Adding Action Data Table to map_qdepth_to_prob_t_0
+table placement completed pipe
+ingress: [1948438] 0 00 000 0000
+  1: tbl_get_rndnum
+  2: multicast_t_0(ingress::ig_intr_md.ingress_port == 68; => $true, 1){ GE -1+16, 2 [1x1 1K] } @stage(0)
+    $true: [1948727]
+      4: tbl_drop
+    $default: [1948504]
+      10: tbl_set_p4_header
+  20: tbl_get_drop_prob(ingress::ig_intr_md.ingress_port == 68; => $true, 1)
+    stateful Ingress.reg_drop_prob  512
+    $true: [1948869]
+      21: tbl_set_drop_prob
+        stateful Ingress.reg_drop_prob  512
+  31: tbl_get_diff
+  41: tbl_drop_0(ingress::meta.diff == 0;, 1 => $false)
+    $false: [2066801]
+egress: [1956684] 0 00 000
+  0: mod_dst_mac_t_0{ E -1+32, 6 [1x1 1K] } @stage(0)
+  3: tbl_mod_header
+  11: tbl_get_weighted_qdepth(egress::eg_intr_md.egress_port == 68; => $false, 1)
+    $false: [2067108]
+  22: tbl_get_ewma(egress::eg_intr_md.egress_port == 68;, 1 => $true)
+    stateful Egress.reg_aver_qdepth  512
+    $true: [1957256]
+      23: tbl_set_qdepth
+        stateful Egress.reg_aver_qdepth  512
+    $default: [1957027] 0
+      30: tbl_get_qdepth
+      40: map_qdepth_to_prob_t_0{ E 6+0, 4 64K }
+
